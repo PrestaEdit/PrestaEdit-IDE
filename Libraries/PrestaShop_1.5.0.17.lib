@@ -1,0 +1,3208 @@
+<?xml version="1.0"?>
+<lib>
+	<name>PrestaShop 1.5.0.17</name>
+	<type>PrestaShop</type>
+	<classes>
+		<class name="Address">
+			<methods>
+				<method type="public">__construct($id_address = null, $id_lang = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">getFieldsValidate()</method>
+				<method type="public">validateController($htmlentities = true)</method>
+				<method type="static">getZoneById($id_address)</method>
+				<method type="static">isCountryActiveById($id_address)</method>
+				<method type="public">isUsed()</method>
+				<method type="static">getCountryAndState($id_address)</method>
+				<method type="static">addressExists($id_address)</method>
+				<method type="static">getFirstCustomerAddressId($id_customer, $active = true)</method>
+				<method type="static">initialize($id_address = null)</method>
+				<method type="static">getAddressIdBySupplierId($id_supplier)</method>
+			</methods>
+		</class>
+		<class name="AddressFormat">
+			<methods>
+				<method type="public">_checkValidateClassField($className, $fieldName, $isIdField)</method>
+				<method type="public">_checkLiableAssociation($patternName, $fieldsValidate)</method>
+				<method type="public">checkFormatFields()</method>
+				<method type="public">getErrorList()</method>
+				<method type="static">_setOriginalDisplayFormat($formattedValueList, $currentLine, $currentKeyList)</method>
+				<method type="static">cleanOrderedAddress($orderedAddressField)</method>
+				<method type="static">getFormattedAddressFieldsValues($address, $addressFormat, $id_lang = null)</method>
+				<method type="static">generateAddress(Address $address, $patternRules = array</method>
+				<method type="static">generateAddressSmarty($params, $smarty)</method>
+				<method type="static">getValidateFields($className)</method>
+				<method type="static">getLiableClass($className)</method>
+				<method type="static">getOrderedAddressFields($id_country = 0, $split_all = false, $cleaned = false)</method>
+				<method type="static">getFormattedLayoutData($address)</method>
+				<method type="static">getAddressCountryFormat($id_country = 0)</method>
+				<method type="public">getFormat($id_country)</method>
+				<method type="public">_getFormatDB($id_country)</method>
+			</methods>
+		</class>
+		<class name="AdminTab">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">l($string, $class = 'AdminTab', $addslashes = FALSE, $htmlentities = TRUE)</method>
+				<method type="public">displayAjax()</method>
+				<method type="public">display()</method>
+				<method type="public">displayRequiredFields()</method>
+				<method type="public">includeSubTab($methodname, $actions = array</method>
+				<method type="public">validateRules($className = false)</method>
+				<method type="public">_childValidation()</method>
+				<method type="public">deleteImage($id)</method>
+				<method type="public">ajaxPreProcess()</method>
+				<method type="public">ajaxProcess()</method>
+				<method type="public">postProcess()</method>
+				<method type="public">updateAssoShop($id_object = false)</method>
+				<method type="static">getAssoShop($table, $id_object = false)</method>
+				<method type="public">updateOptions($token)</method>
+				<method type="public">beforeUpdateOptions()</method>
+				<method type="public">validateField($value, $field)</method>
+				<method type="public">uploadImage($id, $name, $dir, $ext = false, $width = NULL, $height = NULL)</method>
+				<method type="public">postImage($id)</method>
+				<method type="public">copyFromPost($object, $table)</method>
+				<method type="public">displayErrors()</method>
+				<method type="public">displayWarning($warn)</method>
+				<method type="public">displayConf()</method>
+				<method type="public">getList($id_lang, $orderBy = NULL, $orderWay = NULL, $start = 0, $limit = NULL, $id_lang_shop = false)</method>
+				<method type="public">displayImage($id, $image, $size, $id_image = NULL, $token = NULL, $disableCache = false)</method>
+				<method type="public">displayListHeader($token = NULL)</method>
+				<method type="public">displayTop()</method>
+				<method type="public">displayList()</method>
+				<method type="public">displayListContent($token = NULL)</method>
+				<method type="public">displayAddButton()</method>
+				<method type="public">_displayEnableLink($token, $id, $value, $active,  $id_category = NULL, $id_product = NULL)</method>
+				<method type="public">_displayDuplicate($token = NULL, $id)</method>
+				<method type="public">_displayViewLink($token = NULL, $id)</method>
+				<method type="public">_displayEditLink($token = NULL, $id)</method>
+				<method type="public">_displayDeleteLink($token = NULL, $id)</method>
+				<method type="public">displayListFooter($token = NULL)</method>
+				<method type="public">displayOptionsList()</method>
+				<method type="public">displayTopOptionCategory($category, $data)</method>
+				<method type="public">displayBottomOptionCategory($category, $data)</method>
+				<method type="public">displayOptionTypeSelect($key, $field, $value)</method>
+				<method type="public">displayOptionTypeBool($key, $field, $value)</method>
+				<method type="public">displayOptionTypeRadio($key, $field, $value)</method>
+				<method type="public">displayOptionTypeText($key, $field, $value)</method>
+				<method type="public">displayOptionTypePassword($key, $field, $value)</method>
+				<method type="public">displayOptionTypeTextarea($key, $field, $value)</method>
+				<method type="public">displayOptionTypeFile($key, $field, $value)</method>
+				<method type="public">displayOptionTypeImage($key, $field, $value)</method>
+				<method type="public">displayOptionTypeTextLang($key, $field, $value)</method>
+				<method type="public">displayOptionTypeTextareaLang($key, $field, $value)</method>
+				<method type="public">displayOptionTypeSelectLang($key, $field, $value)</method>
+				<method type="public">displayOptionTypePrice($key, $field, $value)</method>
+				<method type="public">displayOptionTypeDisabled($key, $field, $value)</method>
+				<method type="public">loadObject($opt = false)</method>
+				<method type="public">getFieldValue($obj, $key, $id_lang = NULL, $id_shop = null)</method>
+				<method type="public">displayForm($firstCall = true)</method>
+				<method type="public">viewDetails()</method>
+				<method type="public">beforeDelete($object)</method>
+				<method type="public">afterDelete($object, $oldId)</method>
+				<method type="public">afterAdd($object)</method>
+				<method type="public">afterUpdate($object)</method>
+				<method type="public">afterImageUpload()</method>
+				<method type="public">viewAccess($disable = false)</method>
+				<method type="public">checkToken()</method>
+				<method type="public">displayFlags($languages, $default_language, $ids, $id, $return = false, $use_vars_instead_of_ids = false)</method>
+				<method type="public">filterToField($key, $filter)</method>
+				<method type="public">warnDomainName()</method>
+				<method type="public">displayAssoShop()</method>
+				<method type="public">getCurrentUrl($remove = array</method>
+			</methods>
+		</class>
+		<class name="Alias">
+			<methods>
+				<method type="public">__construct($id = null, $alias = null, $search = null, $id_lang = null)</method>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">getAliases()</method>
+				<method type="static">isFeatureActive()</method>
+			</methods>
+		</class>
+		<class name="Attachment">
+			<methods>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($attachments)</method>
+				<method type="static">getAttachments($id_lang, $id_product, $include = true)</method>
+				<method type="static">deleteProductAttachments($id_product)</method>
+				<method type="public">attachProduct($id_product)</method>
+				<method type="static">attachToProduct($id_product, $array)</method>
+				<method type="static">getProductAttached($id_lang, $list)</method>
+			</methods>
+		</class>
+		<class name="Attribute">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null, $id_shop = null)</method>
+				<method type="public">delete()</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="static">getAttributes($id_lang, $not_null = false)</method>
+				<method type="static">checkAttributeQty($id_product_attribute, $qty, Shop $shop = null)</method>
+				<method type="static">getAttributeQty($id_product)</method>
+				<method type="static">updateQtyProduct($arr)</method>
+				<method type="public">isColorAttribute()</method>
+				<method type="static">getAttributeMinimalQty($id_product_attribute)</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="public">cleanPositions($id_attribute_group, $use_last_attribute = true)</method>
+				<method type="static">getHigherPosition($id_attribute_group)</method>
+			</methods>
+		</class>
+		<class name="AttributeGroup">
+			<methods>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">update($nullValues = false)</method>
+				<method type="static">cleanDeadCombinations()</method>
+				<method type="public">delete()</method>
+				<method type="static">getAttributes($id_lang, $id_attribute_group)</method>
+				<method type="static">getAttributesGroups($id_lang)</method>
+				<method type="public">deleteSelection($selection)</method>
+				<method type="public">setWsProductOptionValues($values)</method>
+				<method type="public">getWsProductOptionValues()</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">cleanPositions()</method>
+				<method type="static">getHigherPosition()</method>
+				<method type="public">__construct()</method>
+				<method type="static">getInstance()</method>
+				<method type="public">load($classname)</method>
+				<method type="public">generateIndex()</method>
+				<method type="public">getClassesFromDir($path)</method>
+				<method type="public">getClassPath($classname)</method>
+			</methods>
+		</class>
+		<class name="Backup">
+			<methods>
+				<method type="public">__construct($filename = null)</method>
+				<method type="public">setCustomBackupPath($dir)</method>
+				<method type="public">getRealBackupPath($filename = null)</method>
+				<method type="static">getBackupPath($filename)</method>
+				<method type="public">getBackupURL()</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($list)</method>
+				<method type="public">add()</method>
+			</methods>
+		</class>
+		<class name="Blowfish">
+		</class>
+		<class name="Crypt_Blowfish">
+		</class>
+		<class name="Cache">
+			<methods>
+				<method type="abstract">_set($key, $value, $ttl = 0)</method>
+				<method type="abstract">_get($key)</method>
+				<method type="abstract">_exists($key)</method>
+				<method type="abstract">_delete($key)</method>
+				<method type="abstract">_writeKeys()</method>
+				<method type="abstract">flush()</method>
+				<method type="static">getInstance()</method>
+				<method type="public">set($key, $value, $ttl = 0)</method>
+				<method type="public">get($key)</method>
+				<method type="public">exists($key)</method>
+				<method type="public">delete($key)</method>
+				<method type="public">setQuery($query, $result)</method>
+				<method type="public">deleteQuery($query)</method>
+				<method type="public">isBlacklist($query)</method>
+				<method type="static">store($key, $value)</method>
+				<method type="static">retrieve($key)</method>
+				<method type="static">retrieveAll()</method>
+				<method type="static">isStored($key)</method>
+				<method type="static">clean($key)</method>
+				<method type="public">__construct()</method>
+				<method type="public">_set($key, $value, $ttl = 0)</method>
+				<method type="public">_get($key)</method>
+				<method type="public">_exists($key)</method>
+				<method type="public">_delete($key)</method>
+				<method type="public">_writeKeys()</method>
+				<method type="public">flush()</method>
+			</methods>
+		</class>
+		<class name="CacheFs">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">_set($key, $value, $ttl = 0)</method>
+				<method type="public">_get($key)</method>
+				<method type="public">_exists($key)</method>
+				<method type="public">_delete($key)</method>
+				<method type="public">_writeKeys()</method>
+				<method type="public">flush()</method>
+				<method type="static">deleteCacheDirectory()</method>
+				<method type="static">createCacheDirectories($level_depth, $directory = false)</method>
+				<method type="public">getFilename($key)</method>
+				<method type="public">__construct()</method>
+				<method type="public">__destruct()</method>
+				<method type="public">connect()</method>
+				<method type="public">_set($key, $value, $ttl = 0)</method>
+				<method type="public">_get($key)</method>
+				<method type="public">_exists($key)</method>
+				<method type="public">_delete($key)</method>
+				<method type="public">_writeKeys()</method>
+				<method type="public">flush()</method>
+				<method type="public">close()</method>
+				<method type="static">addServer($ip, $port, $weight)</method>
+				<method type="static">getMemcachedServers()</method>
+				<method type="static">deleteServer($id_server)</method>
+				<method type="public">__construct()</method>
+				<method type="public">_set($key, $value, $ttl = 0)</method>
+				<method type="public">_get($key)</method>
+				<method type="public">_exists($key)</method>
+				<method type="public">_delete($key)</method>
+				<method type="public">_writeKeys()</method>
+				<method type="public">flush()</method>
+			</methods>
+		</class>
+		<class name="Carrier">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">setConfiguration($id_old)</method>
+				<method type="public">getDeliveryPriceByWeight($total_weight, $id_zone)</method>
+				<method type="static">checkDeliveryPriceByWeight($id_carrier, $total_weight, $id_zone)</method>
+				<method type="public">getMaxDeliveryPriceByWeight($id_zone)</method>
+				<method type="public">getDeliveryPriceByPrice($order_total, $id_zone, $id_currency = null)</method>
+				<method type="static">checkDeliveryPriceByPrice($id_carrier, $order_total, $id_zone, $id_currency = null)</method>
+				<method type="public">getMaxDeliveryPriceByPrice($id_zone)</method>
+				<method type="static">getDeliveryPriceByRanges($range_table, $id_carrier)</method>
+				<method type="static">getCarriers($id_lang, $active = false, $delete = false, $id_zone = false, $ids_group = null, $modules_filters = self::PS_CARRIERS_ONLY)</method>
+				<method type="static">getDeliveredCountries($id_lang, $active_countries = false, $active_carriers = false, $contain_states = null)</method>
+				<method type="static">getDefaultCarrierSelection($carriers, $default_carrier = 0)</method>
+				<method type="static">getCarriersForOrder($id_zone, $groups = null, $cart = null)</method>
+				<method type="static">checkCarrierZone($id_carrier, $id_zone)</method>
+				<method type="public">getZones()</method>
+				<method type="public">getZone($id_zone)</method>
+				<method type="public">addZone($id_zone)</method>
+				<method type="public">deleteZone($id_zone)</method>
+				<method type="public">getGroups()</method>
+				<method type="public">deleteDeliveryPrice($range_table)</method>
+				<method type="public">addDeliveryPrice($price_list)</method>
+				<method type="public">copyCarrierData($old_id)</method>
+				<method type="static">getCarrierByReference($id_reference)</method>
+				<method type="public">isUsed()</method>
+				<method type="public">getShippingMethod()</method>
+				<method type="public">getRangeTable()</method>
+				<method type="public">getRangeObject()</method>
+				<method type="public">getRangeSuffix($currency = null)</method>
+				<method type="public">getIdTaxRulesGroup(Context $context = null)</method>
+				<method type="static">getIdTaxRulesGroupByIdCarrier($id_carrier, Context $context = null)</method>
+				<method type="public">deleteTaxRulesGroup(array $shops = null)</method>
+				<method type="public">setTaxRulesGroup($id_tax_rules_group, $all_shops = false)</method>
+				<method type="public">getTaxesRate(Address $address)</method>
+				<method type="public">getTaxCalculator(Address $address)</method>
+				<method type="static">sqlDeliveryRangeShop($range_table, $alias = 'd')</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">cleanPositions()</method>
+				<method type="static">getHigherPosition()</method>
+				<method type="static">getAvailableCarrierList(Product $product, $id_warehouse, $id_address_delivery = null, $id_shop = null, $cart = null)</method>
+				<method type="static">assignGroupToAllCarriers($id_group_list, $exception = null)</method>
+			</methods>
+		</class>
+		<class name="Cart">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">updateAddressId($id_address, $id_address_new)</method>
+				<method type="public">delete()</method>
+				<method type="static">getTaxesAverageUsed($id_cart)</method>
+				<method type="public">getDiscounts($lite = false, $refresh = false)</method>
+				<method type="public">getCartRules($filter = CartRule::FILTER_ACTION_ALL)</method>
+				<method type="public">getDiscountsCustomer($id_cart_rule)</method>
+				<method type="public">getLastProduct()</method>
+				<method type="public">getProducts($refresh = false, $id_product = false, $id_country = null)</method>
+				<method type="static">cacheSomeAttributesLists($ipa_list, $id_lang)</method>
+				<method type="public">nbProducts()</method>
+				<method type="static">getNbProducts($id)</method>
+				<method type="public">addDiscount($id_cart_rule)</method>
+				<method type="public">addCartRule($id_cart_rule)</method>
+				<method type="public">containsProduct($id_product, $id_product_attribute = 0, $id_customization = false, $id_address_delivery = 0)</method>
+				<method type="public">updateQty($quantity, $id_product, $id_product_attribute = null, $id_customization = false,</method>
+				<method type="public">_updateCustomizationQuantity($quantity, $id_customization, $id_product, $id_product_attribute, $id_address_delivery, $operator = 'up')</method>
+				<method type="public">_addCustomization($id_product, $id_product_attribute, $index, $type, $field, $quantity)</method>
+				<method type="public">orderExists()</method>
+				<method type="public">deleteDiscount($id_cart_rule)</method>
+				<method type="public">removeCartRule($id_cart_rule)</method>
+				<method type="public">deleteProduct($id_product, $id_product_attribute = null, $id_customization = null, $id_address_delivery = 0)</method>
+				<method type="public">_deleteCustomization($id_customization, $id_product, $id_product_attribute, $id_address_delivery = 0)</method>
+				<method type="static">getTotalCart($id_cart, $use_tax_display = false, $type = CART::BOTH)</method>
+				<method type="static">getOrderTotalUsingTaxCalculationMethod($id_cart)</method>
+				<method type="public">getOrderTotal($with_taxes = true, $type = Cart::BOTH, $products = null, $id_carrier = null, $use_cache = true)</method>
+				<method type="public">getNbOfPackages()</method>
+				<method type="public">getPackageList($flush = false)</method>
+				<method type="public">getDeliveryOptionList(Country $default_country = null, $flush = false)</method>
+				<method type="static">sortDeliveryOptionList($option1, $option2)</method>
+				<method type="public">carrierIsSelected($id_carrier, $id_address)</method>
+				<method type="public">simulateCarriersOutput(Country $default_country = null, $flush = false)</method>
+				<method type="public">simulateCarrierSelectedOutput()</method>
+				<method type="static">intifier($string, $delimiter = ',')</method>
+				<method type="static">desintifier($int, $delimiter = ',')</method>
+				<method type="public">isMultiAddressDelivery()</method>
+				<method type="public">getAddressCollection()</method>
+				<method type="public">setDeliveryOption($delivery_option = null)</method>
+				<method type="public">getIdCarrierFromDeliveryOption($delivery_option)</method>
+				<method type="public">getDeliveryOption($default_country = null, $dontAutoSeletectOptions = false, $use_cache = true)</method>
+				<method type="public">getTotalShippingCost($delivery_option = null, $use_tax = true, Country $default_country = null)</method>
+				<method type="public">getCarrierCost($id_carrier, $useTax = true, Country $default_country = null, $delivery_option = null)</method>
+				<method type="public">getOrderShippingCost($id_carrier = null, $use_tax = true, Country $default_country = null, $product_list = null)</method>
+				<method type="public">getPackageShippingCost($id_carrier = null, $use_tax = true, Country $default_country = null, $product_list = null)</method>
+				<method type="public">getTotalWeight($products = null)</method>
+				<method type="public">checkDiscountValidity($obj, $discounts, $order_total, $products, $check_cart_discount = false)</method>
+				<method type="public">getSummaryDetails($id_lang = null, $refresh = false)</method>
+				<method type="public">checkQuantities()</method>
+				<method type="static">lastNoneOrderedCart($id_customer)</method>
+				<method type="public">isVirtualCart($strict = false)</method>
+				<method type="static">getCartByOrderId($id_order)</method>
+				<method type="static">getCartIdByOrderId($id_order)</method>
+				<method type="public">addTextFieldToProduct($id_product, $index, $type, $text_value)</method>
+				<method type="public">addPictureToProduct($id_product, $index, $type, $file)</method>
+				<method type="public">deleteCustomizationToProduct($id_product, $index)</method>
+				<method type="public">getProductCustomization($id_product, $type = null, $not_in_cart = false)</method>
+				<method type="static">getCustomerCarts($id_customer, $with_order = true)</method>
+				<method type="static">replaceZeroByShopName($echo, $tr)</method>
+				<method type="public">duplicate()</method>
+				<method type="public">getWsCartRows()</method>
+				<method type="public">setWsCartRows($values)</method>
+				<method type="public">setProductAddressDelivery($id_product, $id_product_attribute, $old_id_address_delivery, $new_id_address_delivery)</method>
+				<method type="public">duplicateProduct($id_product, $id_product_attribute, $id_address_delivery,</method>
+				<method type="public">setNoMultishipping()</method>
+				<method type="public">autosetProductAddress()</method>
+				<method type="public">deleteAssociations()</method>
+				<method type="static">isGuestCartByCartId($id_cart)</method>
+				<method type="public">isCarrierInRange($id_carrier, $id_zone)</method>
+				<method type="public">isAllProductsInStock($ignore_virtual = false, $exclusive = false)</method>
+				<method type="static">addExtraCarriers($array)</method>
+				<method type="public">getDeliveryAddressesWithoutCarriers($return_collection = false)</method>
+			</methods>
+		</class>
+		<class name="CartRule">
+			<methods>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">copyConditions($id_cart_rule_source, $id_cart_rule_destination)</method>
+				<method type="static">getIdByCode($code)</method>
+				<method type="static">getCustomerCartRules($id_lang, $id_customer, $active = false, $includeGeneric = true, $inStock = false, Cart $cart = null)</method>
+				<method type="public">usedByCustomer($id_customer)</method>
+				<method type="static">cartRuleExists($name)</method>
+				<method type="static">deleteByIdCustomer($id_customer)</method>
+				<method type="public">getProductRuleGroups()</method>
+				<method type="public">getProductRules($id_product_rule_group)</method>
+				<method type="public">checkValidity(Context $context, $alreadyInCart = false, $display_error = true)</method>
+				<method type="public">checkProductRestrictions(Context $context, $return_products = false, $display_error = true)</method>
+				<method type="static">array_uintersect($array1, $array2)</method>
+				<method type="static">array_uintersect_compare($a, $b)</method>
+				<method type="public">getContextualValue($use_tax, Context $context = null, $filter = null, $package = null, $use_cache = true)</method>
+				<method type="static">cleanCache()</method>
+				<method type="public">getCartRuleCombinations()</method>
+				<method type="public">getAssociatedRestrictions($type, $active_only, $i18n)</method>
+				<method type="static">autoRemoveFromCart($context = null)</method>
+				<method type="static">autoAddToCart(Context $context = null)</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="static">cleanProductRuleIntegrity($type, $list)</method>
+				<method type="static">getCartsRuleByCode($name, $id_lang)</method>
+			</methods>
+		</class>
+		<class name="Category">
+			<methods>
+				<method type="public">__construct($id_category = null, $id_lang = null, $id_shop = null)</method>
+				<method type="static">getDescriptionClean($description)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">toggleStatus()</method>
+				<method type="public">recurseLiteCategTree($max_depth = 3, $current_depth = 0, $id_lang = null, $excluded_ids_array = null)</method>
+				<method type="static">recurseCategory($categories, $current, $id_category = 1, $id_selected = 1)</method>
+				<method type="public">recursiveDelete($to_delete, $id_category)</method>
+				<method type="public">deleteLite()</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($categories)</method>
+				<method type="public">calcLevelDepth()</method>
+				<method type="static">regenerateEntireNtree()</method>
+				<method type="static">_subTree($categories, $id_category, $n)</method>
+				<method type="public">recalculateLevelDepth($id_category)</method>
+				<method type="static">getCategories($id_lang = false, $active = true, $order = true, $sql_filter = '', $sql_sort = '', $sql_limit = '')</method>
+				<method type="static">getSimpleCategories($id_lang)</method>
+				<method type="public">getShopID()</method>
+				<method type="public">getSubCategories($id_lang, $active = true)</method>
+				<method type="public">getProducts($id_lang, $p, $n, $order_by = null, $order_way = null, $get_total = false, $active = true, $random = false, $random_number_products = 1, $check_access = true, Context $context = null)</method>
+				<method type="static">getHomeCategories($id_lang, $active = true)</method>
+				<method type="static">getRootCategory($id_lang = null, Shop $shop = null)</method>
+				<method type="static">getChildren($id_parent, $id_lang, $active = true, $id_shop = false)</method>
+				<method type="public">getAllChildren($id_lang = null)</method>
+				<method type="static">getChildrenWithNbSelectedSubCat($id_parent, $selected_cat, $id_lang, Shop $shop = null, $use_shop_context = true)</method>
+				<method type="static">duplicateProductCategories($id_old, $id_new)</method>
+				<method type="static">checkBeforeMove($id_category, $id_parent)</method>
+				<method type="static">getLinkRewrite($id_category, $id_lang)</method>
+				<method type="public">getLink(Link $link = null)</method>
+				<method type="public">getName($id_lang = null)</method>
+				<method type="static">searchByName($id_lang, $query, $unrestricted = false)</method>
+				<method type="static">searchByNameAndParentCategoryId($id_lang, $category_name, $id_parent_category)</method>
+				<method type="public">getParentsCategories($id_lang = null)</method>
+				<method type="static">categoryExists($id_category)</method>
+				<method type="public">cleanGroups()</method>
+				<method type="public">cleanAssoProducts()</method>
+				<method type="public">addGroups($groups)</method>
+				<method type="public">getGroups()</method>
+				<method type="public">addGroupsIfNoExist($id_group)</method>
+				<method type="public">checkAccess($id_customer)</method>
+				<method type="public">updateGroup($list)</method>
+				<method type="static">setNewGroupForHome($id_group)</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">cleanPositions($id_category_parent = null)</method>
+				<method type="static">getLastPosition($id_category_parent, $id_shop)</method>
+				<method type="static">getUrlRewriteInformations($id_category)</method>
+				<method type="static">getInterval($id)</method>
+				<method type="public">inShop(Shop $shop = null)</method>
+				<method type="static">inShopStatic($id_category, Shop $shop = null)</method>
+				<method type="public">getChildrenWs()</method>
+				<method type="public">getProductsWs()</method>
+				<method type="public">getDuplicatePosition()</method>
+				<method type="public">getWsNbProductsRecursive()</method>
+				<method type="static">getCategoryInformations($ids_category, $id_lang = null)</method>
+				<method type="public">isParentCategoryAvailable($id_shop)</method>
+				<method type="public">addShop($id_shop)</method>
+				<method type="static">getRootCategories($id_lang = null, $active = true)</method>
+				<method type="static">getCategoriesWithoutParent()</method>
+				<method type="public">isRootCategoryForAShop()</method>
+				<method type="static">getTopCategory($id_lang = null)</method>
+				<method type="public">addPosition($position, $id_shop = null)</method>
+				<method type="static">getShopsByCategory($id_category)</method>
+				<method type="static">updateFromShop($categories, $id_shop)</method>
+				<method type="public">deleteFromShop($id_shop)</method>
+				<method type="static">deleteCategoriesFromShop($id_shop)</method>
+				<method type="static">addToShop(array $categories, $id_shop)</method>
+				<method type="public">existsInShop($id_shop)</method>
+			</methods>
+		</class>
+		<class name="Chart">
+			<methods>
+				<method type="static">init()</method>
+				<method type="public">__construct()</method>
+				<method type="public">setSize($width, $height)</method>
+				<method type="public">setTimeMode($from, $to, $granularity)</method>
+				<method type="public">getCurve($i)</method>
+				<method type="public">display()</method>
+				<method type="public">fetch()</method>
+			</methods>
+		</class>
+		<class name="Curve">
+			<methods>
+				<method type="public">setValues($values)</method>
+				<method type="public">getValues($time_mode = false)</method>
+				<method type="public">setPoint($x, $y)</method>
+				<method type="public">setLabel($label)</method>
+				<method type="public">setType($type)</method>
+				<method type="public">getPoint($x)</method>
+			</methods>
+		</class>
+		<class name="CMS">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">getLinks($id_lang, $selection = null, $active = true, Link $link = null)</method>
+				<method type="static">listCms($id_lang = null, $id_block = false, $active = true)</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">cleanPositions($id_category)</method>
+				<method type="static">getLastPosition($id_category)</method>
+				<method type="static">getCMSPages($id_lang = null, $id_cms_category = null, $active = true)</method>
+				<method type="static">getUrlRewriteInformations($id_cms)</method>
+			</methods>
+		</class>
+		<class name="CMSCategory">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">recurseLiteCategTree($max_depth = 3, $currentDepth = 0, $id_lang = null, $excluded_ids_array = null, Link $link = null)</method>
+				<method type="static">getRecurseCategory($id_lang = null, $current = 1, $active = 1, $links = 0, Link $link = null)</method>
+				<method type="static">recurseCMSCategory($categories, $current, $id_cms_category = 1, $id_selected = 1, $is_html = 0)</method>
+				<method type="public">recursiveDelete($to_delete, $id_cms_category)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($categories)</method>
+				<method type="public">calcLevelDepth()</method>
+				<method type="static">getCategories($id_lang, $active = true, $order = true)</method>
+				<method type="static">getSimpleCategories($id_lang)</method>
+				<method type="public">getSubCategories($id_lang, $active = true)</method>
+				<method type="static">hideCMSCategoryPosition($name)</method>
+				<method type="static">getHomeCategories($id_lang, $active = true)</method>
+				<method type="static">getChildren($id_parent, $id_lang, $active = true)</method>
+				<method type="static">checkBeforeMove($id_cms_category, $id_parent)</method>
+				<method type="static">getLinkRewrite($id_cms_category, $id_lang)</method>
+				<method type="public">getLink(Link $link = null)</method>
+				<method type="public">getName($id_lang = null)</method>
+				<method type="static">searchByName($id_lang, $query, $unrestricted = false)</method>
+				<method type="static">searchByNameAndParentCMSCategoryId($id_lang, $CMSCategory_name, $id_parent_CMSCategory)</method>
+				<method type="public">getParentsCategories($id_lang = null)</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">cleanPositions($id_category_parent)</method>
+				<method type="static">getLastPosition($id_category_parent)</method>
+				<method type="static">getUrlRewriteInformations($id_category)</method>
+				<method type="public">__construct($classname, $id_lang = null)</method>
+				<method type="public">join($association, $on = '', $type = null)</method>
+				<method type="public">where($field, $operator, $value, $method = 'where')</method>
+				<method type="public">sqlWhere($sql)</method>
+				<method type="public">having($field, $operator, $value)</method>
+				<method type="public">sqlHaving($sql)</method>
+				<method type="public">orderBy($field, $order = 'asc')</method>
+				<method type="public">sqlOrderBy($sql)</method>
+				<method type="public">groupBy($field)</method>
+				<method type="public">sqlGroupBy($sql)</method>
+				<method type="public">getAll($display_query = false)</method>
+				<method type="public">getFirst()</method>
+				<method type="public">getResults()</method>
+				<method type="public">rewind()</method>
+				<method type="public">current()</method>
+				<method type="public">valid()</method>
+				<method type="public">key()</method>
+				<method type="public">next()</method>
+				<method type="public">count()</method>
+				<method type="public">offsetExists($offset)</method>
+				<method type="public">offsetGet($offset)</method>
+				<method type="public">offsetSet($offset, $value)</method>
+				<method type="public">offsetUnset($offset)</method>
+				<method type="public">getDefinition($association)</method>
+				<method type="public">parseFields($str)</method>
+				<method type="public">parseField($field)</method>
+				<method type="public">formatValue($value, $field)</method>
+				<method type="public">getFieldInfo($field)</method>
+				<method type="public">generateAlias($association = '')</method>
+			</methods>
+		</class>
+		<class name="Combination">
+			<methods>
+				<method type="public">delete()</method>
+				<method type="public">deleteAssociations()</method>
+				<method type="public">setAttributes($ids_attribute)</method>
+				<method type="public">setWsProductOptionValues($values)</method>
+				<method type="public">getWsProductOptionValues()</method>
+				<method type="public">getWsImages()</method>
+				<method type="public">setImages($ids_image)</method>
+				<method type="public">setWsImages($values)</method>
+				<method type="public">getAttributesName($id_lang)</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="static">isCurrentlyUsed($table = null, $has_active_column = false)</method>
+				<method type="static">getIdByReference($id_product, $reference)</method>
+				<method type="static">getPrice($id_product_attribute)</method>
+			</methods>
+		</class>
+		<class name="CompareProduct">
+			<methods>
+				<method type="static">getCompareProducts($id_compare)</method>
+				<method type="static">addCompareProduct($id_compare, $id_product)</method>
+				<method type="static">removeCompareProduct($id_compare, $id_product)</method>
+				<method type="static">getNumberProducts($id_compare)</method>
+				<method type="static">cleanCompareProducts($period = 'week')</method>
+				<method type="static">getIdCompareByIdCustomer($id_customer)</method>
+			</methods>
+		</class>
+		<class name="Configuration">
+			<methods>
+				<method type="public">getFieldsLang()</method>
+				<method type="static">getIdByName($key, $id_shop_group = null, $id_shop = null)</method>
+				<method type="static">loadConfiguration()</method>
+				<method type="static">get($key, $id_lang = null, $id_shop_group = null, $id_shop = null)</method>
+				<method type="static">getGlobalValue($key, $id_lang = null)</method>
+				<method type="static">getInt($key, $id_shop_group = null, $id_shop = null)</method>
+				<method type="static">getMultiple($keys, $id_lang = null, $id_shop_group = null, $id_shop = null)</method>
+				<method type="static">hasKey($key, $id_lang = null, $id_shop_group = null, $id_shop = null)</method>
+				<method type="static">set($key, $values, $id_shop_group = null, $id_shop = null)</method>
+				<method type="static">updateGlobalValue($key, $values, $html = false)</method>
+				<method type="static">updateValue($key, $values, $html = false, $id_shop_group = null, $id_shop = null)</method>
+				<method type="static">deleteByName($key)</method>
+				<method type="static">deleteFromContext($key)</method>
+				<method type="static">hasContext($key, $id_lang, $context)</method>
+				<method type="static">isOverridenByCurrentContext($key)</method>
+				<method type="static">isLangKey($key)</method>
+				<method type="static">sqlRestriction($id_shop_group, $id_shop)</method>
+				<method type="public">getWebserviceObjectList($sql_join, $sql_filter, $sql_sort, $sql_limit)</method>
+			</methods>
+		</class>
+		<class name="ConfigurationTest">
+			<methods>
+				<method type="static">getDefaultTests()</method>
+				<method type="static">getDefaultTestsOp()</method>
+				<method type="static">check($tests)</method>
+				<method type="static">run($ptr, $arg = 0)</method>
+				<method type="static">test_phpversion()</method>
+				<method type="static">test_mysql_support()</method>
+				<method type="static">test_pdo_mysql()</method>
+				<method type="static">test_magicquotes()</method>
+				<method type="static">test_upload()</method>
+				<method type="static">test_fopen()</method>
+				<method type="static">test_system($funcs)</method>
+				<method type="static">test_gd()</method>
+				<method type="static">test_register_globals()</method>
+				<method type="static">test_gz()</method>
+				<method type="static">test_dir($relative_dir, $recursive = false, $full_report = null)</method>
+				<method type="static">test_file($file_relative)</method>
+				<method type="static">test_config_dir($dir)</method>
+				<method type="static">test_sitemap($dir)</method>
+				<method type="static">test_root_dir($dir)</method>
+				<method type="static">test_log_dir($dir)</method>
+				<method type="static">test_admin_dir($dir)</method>
+				<method type="static">test_img_dir($dir)</method>
+				<method type="static">test_module_dir($dir)</method>
+				<method type="static">test_cache_dir($dir)</method>
+				<method type="static">test_tools_v2_dir($dir)</method>
+				<method type="static">test_cache_v2_dir($dir)</method>
+				<method type="static">test_download_dir($dir)</method>
+				<method type="static">test_mails_dir($dir)</method>
+				<method type="static">test_translations_dir($dir)</method>
+				<method type="static">test_theme_lang_dir($dir)</method>
+				<method type="static">test_theme_pdf_lang_dir($dir)</method>
+				<method type="static">test_theme_cache_dir($dir)</method>
+				<method type="static">test_customizable_products_dir($dir)</method>
+				<method type="static">test_virtual_products_dir($dir)</method>
+				<method type="static">test_mcrypt()</method>
+				<method type="static">test_dom()</method>
+			</methods>
+		</class>
+		<class name="Connection">
+			<methods>
+				<method type="public">getFields()</method>
+				<method type="static">setPageConnection($cookie, $full = true)</method>
+				<method type="static">setNewConnection($cookie)</method>
+				<method type="static">setPageTime($id_connections, $id_page, $time_start, $time)</method>
+				<method type="static">cleanConnectionsPages()</method>
+			</methods>
+		</class>
+		<class name="ConnectionsSource">
+			<methods>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="static">logHttpReferer(Cookie $cookie = null)</method>
+				<method type="static">getOrderSources($id_order)</method>
+			</methods>
+		</class>
+		<class name="Contact">
+			<methods>
+				<method type="static">getContacts($id_lang)</method>
+				<method type="static">getCategoriesContacts()</method>
+				<method type="public">getMobileDevice()</method>
+				<method type="public">checkMobileContext()</method>
+				<method type="static">getContext()</method>
+				<method type="public">cloneContext()</method>
+			</methods>
+		</class>
+		<class name="AdminController">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">initBreadcrumbs()</method>
+				<method type="public">initToolbarTitle()</method>
+				<method type="public">viewAccess($disable = false)</method>
+				<method type="public">checkToken()</method>
+				<method type="public">ajaxProcessHelpAccess()</method>
+				<method type="public">processFilter()</method>
+				<method type="public">postProcess()</method>
+				<method type="public">processDeleteImage()</method>
+				<method type="public">processDelete()</method>
+				<method type="public">processSave()</method>
+				<method type="public">processAdd()</method>
+				<method type="public">processUpdate()</method>
+				<method type="public">processUpdateFields()</method>
+				<method type="public">processStatus()</method>
+				<method type="public">processPosition()</method>
+				<method type="public">processResetFilters()</method>
+				<method type="public">processUpdateOptions()</method>
+				<method type="public">initToolbar()</method>
+				<method type="public">loadObject($opt = false)</method>
+				<method type="public">checkAccess()</method>
+				<method type="public">filterToField($key, $filter)</method>
+				<method type="public">displayNoSmarty()</method>
+				<method type="public">displayAjax()</method>
+				<method type="public">redirect()</method>
+				<method type="public">display()</method>
+				<method type="public">displayWarning($msg)</method>
+				<method type="public">displayInformation($msg)</method>
+				<method type="public">initHeader()</method>
+				<method type="public">addRowAction($action)</method>
+				<method type="public">addRowActionSkipList($action, $list)</method>
+				<method type="public">initContent()</method>
+				<method type="public">initCursedPage()</method>
+				<method type="public">initFooter()</method>
+				<method type="public">renderList()</method>
+				<method type="public">renderView()</method>
+				<method type="public">renderForm()</method>
+				<method type="public">renderOptions()</method>
+				<method type="public">setHelperDisplay(Helper $helper)</method>
+				<method type="public">setMedia()</method>
+				<method type="public">l($string, $class = 'AdminTab', $addslashes = false, $htmlentities = true)</method>
+				<method type="public">init()</method>
+				<method type="public">initShopContext()</method>
+				<method type="public">initProcess()</method>
+				<method type="public">getList($id_lang, $order_by = null, $order_way = null, $start = 0, $limit = null, $id_lang_shop = false)</method>
+				<method type="public">getLanguages()</method>
+				<method type="public">getFieldsValue($obj)</method>
+				<method type="public">getFieldValue($obj, $key, $id_lang = null)</method>
+				<method type="public">validateRules($class_name = false)</method>
+				<method type="public">_childValidation()</method>
+				<method type="public">viewDetails()</method>
+				<method type="public">beforeDelete($object)</method>
+				<method type="public">afterDelete($object, $oldId)</method>
+				<method type="public">afterAdd($object)</method>
+				<method type="public">afterUpdate($object)</method>
+				<method type="public">afterImageUpload()</method>
+				<method type="public">copyFromPost($object, $table)</method>
+				<method type="public">getSelectedAssoShop($table)</method>
+				<method type="public">updateAssoShop($id_object)</method>
+				<method type="public">validateField($value, $field)</method>
+				<method type="public">beforeUpdateOptions()</method>
+				<method type="public">postImage($id)</method>
+				<method type="public">uploadImage($id, $name, $dir, $ext = false, $width = null, $height = null)</method>
+				<method type="public">processBulkDelete()</method>
+				<method type="public">processBulkEnableSelection()</method>
+				<method type="public">processBulkDisableSelection()</method>
+				<method type="public">processBulkStatusSelection($status)</method>
+				<method type="public">processBulkAffectZone()</method>
+				<method type="public">beforeAdd($object)</method>
+				<method type="public">displayRequiredFields()</method>
+				<method type="public">createTemplate($tpl_name)</method>
+				<method type="public">jsonConfirmation($message)</method>
+				<method type="public">jsonError($message)</method>
+				<method type="public">isFresh($file, $timeout = 604800000)</method>
+				<method type="public">refresh($file_to_refresh, $external_file)</method>
+				<method type="public">addonsRequest($request, $params = array</method>
+			</methods>
+		</class>
+		<class name="Controller">
+			<methods>
+				<method type="abstract">checkAccess()</method>
+				<method type="abstract">viewAccess()</method>
+				<method type="public">init()</method>
+				<method type="abstract">postProcess()</method>
+				<method type="abstract">display()</method>
+				<method type="abstract">redirect()</method>
+				<method type="abstract">setMedia()</method>
+				<method type="static">getController($class_name, $auth = false, $ssl = false)</method>
+				<method type="public">__construct()</method>
+				<method type="public">run()</method>
+				<method type="public">displayHeader($display = true)</method>
+				<method type="public">displayFooter($display = true)</method>
+				<method type="public">setTemplate($template)</method>
+				<method type="abstract">initHeader()</method>
+				<method type="abstract">initContent()</method>
+				<method type="abstract">initCursedPage()</method>
+				<method type="abstract">initFooter()</method>
+				<method type="public">addCSS($css_uri, $css_media_type = 'all')</method>
+				<method type="public">addJS($js_uri)</method>
+				<method type="public">addJquery($version = null, $folder = null, $minifier = true)</method>
+				<method type="public">addJqueryUI($component, $theme = 'base', $check_dependencies = true)</method>
+				<method type="public">addJqueryPlugin($name, $folder = null)</method>
+				<method type="public">isXmlHttpRequest()</method>
+			</methods>
+		</class>
+		<class name="FrontController">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">checkAccess()</method>
+				<method type="public">viewAccess()</method>
+				<method type="public">init()</method>
+				<method type="public">postProcess()</method>
+				<method type="public">preProcess()</method>
+				<method type="public">initContent()</method>
+				<method type="public">displayHeader($display = true)</method>
+				<method type="public">displayFooter($display = true)</method>
+				<method type="public">initCursedPage()</method>
+				<method type="public">process()</method>
+				<method type="public">redirect()</method>
+				<method type="public">displayContent()</method>
+				<method type="public">display()</method>
+				<method type="public">displayMaintenancePage()</method>
+				<method type="public">displayRestrictedCountryPage()</method>
+				<method type="public">canonicalRedirection($canonical_url = '')</method>
+				<method type="public">geolocationManagement($default_country)</method>
+				<method type="public">setMobileMedia()</method>
+				<method type="public">setMedia()</method>
+				<method type="public">initHeader()</method>
+				<method type="public">initFooter()</method>
+				<method type="public">getLiveEditFooter()</method>
+				<method type="public">productSort()</method>
+				<method type="public">pagination($nbProducts = 10)</method>
+				<method type="static">getCurrentCustomerGroups()</method>
+				<method type="static">isInWhitelistForGeolocation()</method>
+				<method type="public">isTokenValid()</method>
+				<method type="public">addCSS($css_uri, $css_media_type = 'all')</method>
+				<method type="public">addJS($js_uri)</method>
+				<method type="public">recoverCart()</method>
+				<method type="public">setTemplate($default_template)</method>
+				<method type="public">getOverrideTemplate()</method>
+				<method type="public">getLayout()</method>
+				<method type="public">setMobileTemplate($template)</method>
+			</methods>
+		</class>
+		<class name="ModuleAdminController">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">createTemplate($tpl_name)</method>
+				<method type="public">getTemplatePath()</method>
+				<method type="public">__construct()</method>
+				<method type="public">setTemplate($template)</method>
+				<method type="public">getTemplatePath()</method>
+				<method type="static">includeController($className)</method>
+				<method type="static">getController($className, $auth = false, $ssl = false)</method>
+			</methods>
+		</class>
+		<class name="Cookie">
+			<methods>
+				<method type="public">__construct($name, $path = '', $expire = null, $shared_urls = null)</method>
+				<method type="public">getDomain($shared_urls = null)</method>
+				<method type="public">setExpire($expire)</method>
+				<method type="public">__get($key)</method>
+				<method type="public">__isset($key)</method>
+				<method type="public">__set($key, $value)</method>
+				<method type="public">__unset($key)</method>
+				<method type="public">isLogged($withGuest = false)</method>
+				<method type="public">isLoggedBack()</method>
+				<method type="public">logout()</method>
+				<method type="public">mylogout()</method>
+				<method type="public">makeNewLog()</method>
+				<method type="public">update($nullValues = false)</method>
+				<method type="public">_setcookie($cookie = null)</method>
+				<method type="public">write()</method>
+				<method type="public">getFamily($origin)</method>
+				<method type="public">unsetFamily($origin)</method>
+				<method type="public">getName()</method>
+				<method type="public">exists()</method>
+			</methods>
+		</class>
+		<class name="Country">
+			<methods>
+				<method type="public">delete()</method>
+				<method type="static">getCountries($id_lang, $active = false, $contain_states = false, $list_states = true)</method>
+				<method type="static">getCountriesByIdShop($id_shop, $id_lang)</method>
+				<method type="static">getByIso($iso_code)</method>
+				<method type="static">getIdZone($id_country)</method>
+				<method type="static">getNameById($id_lang, $id_country)</method>
+				<method type="static">getIsoById($id_country)</method>
+				<method type="static">getIdByName($id_lang = null, $country)</method>
+				<method type="static">getNeedZipCode($id_country)</method>
+				<method type="static">getZipCodeFormat($id_country)</method>
+				<method type="static">getDefaultCountryId()</method>
+				<method type="static">getCountriesByZoneId($id_zone, $id_lang)</method>
+				<method type="public">isNeedDni()</method>
+				<method type="static">isNeedDniByCountryId($id_country)</method>
+				<method type="static">containsStates($id_country)</method>
+				<method type="public">affectZoneToSelection($ids_countries, $id_zone)</method>
+				<method type="public">checkZipCode($zip_code)</method>
+				<method type="public">delete()</method>
+				<method type="static">getCounties($id_state)</method>
+				<method type="public">getZipCodes()</method>
+				<method type="public">addZipCodes($zip_codes)</method>
+				<method type="public">removeZipCodes($zip_codes)</method>
+				<method type="public">breakDownZipCode($zip_codes)</method>
+				<method type="static">getIdCountyByZipCode($id_state, $zip_code)</method>
+				<method type="public">isZipCodeRangePresent($zip_codes)</method>
+				<method type="public">isZipCodePresent($zip_code)</method>
+				<method type="static">deleteZipCodeByIdCounty($id_county)</method>
+				<method type="static">getIdCountyByNameAndIdState($name, $id_state)</method>
+				<method type="public">__construct($collection, $filename, $delimiter = '</method>
+				<method type="public">export()</method>
+				<method type="public">output($data)</method>
+				<method type="static">wrap($data)</method>
+				<method type="public">headers()</method>
+			</methods>
+		</class>
+		<class name="Currency">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null, $id_shop = null)</method>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="static">exists($iso_code, $iso_code_num, $id_shop = 0)</method>
+				<method type="public">deleteSelection($selection)</method>
+				<method type="public">delete()</method>
+				<method type="public">getSign($side = null)</method>
+				<method type="static">getCurrencies($object = false, $active = 1)</method>
+				<method type="static">getCurrenciesByIdShop($id_shop = 0)</method>
+				<method type="static">getPaymentCurrenciesSpecial($id_module, $id_shop = null)</method>
+				<method type="static">getPaymentCurrencies($id_module, $id_shop = null)</method>
+				<method type="static">checkPaymentCurrencies($id_module, $id_shop = null)</method>
+				<method type="static">getCurrency($id_currency)</method>
+				<method type="static">getIdByIsoCode($iso_code, $id_shop = 0)</method>
+				<method type="static">getIdByIsoCodeNum($iso_code_num, $id_shop = 0)</method>
+				<method type="static">getIdByQuery($id_shop = 0)</method>
+				<method type="public">refreshCurrency($data, $isoCodeSource, $defaultCurrency)</method>
+				<method type="static">getDefaultCurrency()</method>
+				<method type="static">refreshCurrencies()</method>
+				<method type="static">getCurrent()</method>
+				<method type="static">getCurrencyInstance($id)</method>
+			</methods>
+		</class>
+		<class name="Customer">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = true)</method>
+				<method type="public">update($nullValues = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">getCustomers()</method>
+				<method type="public">getByEmail($email, $passwd = null)</method>
+				<method type="static">getCustomersByEmail($email)</method>
+				<method type="static">isBanned($id_customer)</method>
+				<method type="static">customerExists($email, $return_id = false, $ignore_guest = true)</method>
+				<method type="static">customerHasAddress($id_customer, $id_address)</method>
+				<method type="static">resetAddressCache($id_customer)</method>
+				<method type="public">getAddresses($id_lang)</method>
+				<method type="static">getAddressesTotalById($id_customer)</method>
+				<method type="static">checkPassword($id_customer, $passwd)</method>
+				<method type="static">searchByName($query)</method>
+				<method type="static">searchByIp($ip)</method>
+				<method type="public">getStats()</method>
+				<method type="public">getLastConnections()</method>
+				<method type="public">customerIdExists($id_customer)</method>
+				<method type="static">customerIdExistsStatic($id_customer)</method>
+				<method type="public">updateGroup($list)</method>
+				<method type="public">cleanGroups()</method>
+				<method type="public">addGroups($groups)</method>
+				<method type="static">getGroupsStatic($id_customer)</method>
+				<method type="public">getGroups()</method>
+				<method type="public">isUsed()</method>
+				<method type="public">getBoughtProducts()</method>
+				<method type="static">getDefaultGroupId($id_customer)</method>
+				<method type="static">getCurrentCountry($id_customer, Cart $cart = null)</method>
+				<method type="public">toggleStatus()</method>
+				<method type="public">isGuest()</method>
+				<method type="public">transformToCustomer($id_lang, $password = null)</method>
+				<method type="public">setWsPasswd($passwd)</method>
+				<method type="public">isLogged($with_guest = false)</method>
+				<method type="public">logout()</method>
+				<method type="public">mylogout()</method>
+				<method type="public">getLastCart($with_order = true)</method>
+				<method type="public">getOutstanding()</method>
+				<method type="public">getWsGroups()</method>
+				<method type="public">setWsGroups($result)</method>
+				<method type="public">getWebserviceObjectList($sql_join, $sql_filter, $sql_sort, $sql_limit)</method>
+			</methods>
+		</class>
+		<class name="CustomerMessage">
+			<methods>
+				<method type="static">getMessagesByOrderId($id_order, $private = true)</method>
+				<method type="static">getTotalCustomerMessages($where = null)</method>
+			</methods>
+		</class>
+		<class name="CustomerThread">
+			<methods>
+				<method type="public">delete()</method>
+				<method type="static">getCustomerMessages($id_customer, $read = null)</method>
+				<method type="static">getIdCustomerThreadByEmailAndIdOrder($email, $id_order)</method>
+				<method type="static">getContacts()</method>
+				<method type="static">getTotalCustomerThreads($where = null)</method>
+				<method type="static">getMessageCustomerThreads($id_customer_thread)</method>
+				<method type="static">getNextThread($id_customer_thread)</method>
+			</methods>
+		</class>
+		<class name="Customization">
+			<methods>
+				<method type="static">getReturnedCustomizations($id_order)</method>
+				<method type="static">getOrderedCustomizations($id_cart)</method>
+				<method type="static">countCustomizationQuantityByProduct($customizations)</method>
+				<method type="static">getLabel($id_customization, $id_lang)</method>
+				<method type="static">retrieveQuantitiesFromIds($ids_customizations)</method>
+				<method type="static">countQuantityByCart($id_cart)</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="static">isCurrentlyUsed($table = null, $has_active_column = false)</method>
+			</methods>
+		</class>
+		<class name="DateRange">
+			<methods>
+				<method type="static">getCurrentRange()</method>
+			</methods>
+		</class>
+		<class name="Db">
+			<methods>
+				<method type="abstract">connect()</method>
+				<method type="abstract">disconnect()</method>
+				<method type="abstract">_query($sql)</method>
+				<method type="abstract">_numRows($result)</method>
+				<method type="abstract">Insert_ID()</method>
+				<method type="abstract">Affected_Rows()</method>
+				<method type="abstract">nextRow($result = false)</method>
+				<method type="abstract">getVersion()</method>
+				<method type="abstract">_escape($str)</method>
+				<method type="abstract">getMsgError()</method>
+				<method type="abstract">getNumberError()</method>
+				<method type="abstract">set_db($db_name)</method>
+				<method type="static">getInstance($master = true)</method>
+				<method type="static">getClass()</method>
+				<method type="public">__construct($server, $user, $password, $database, $connect = true)</method>
+				<method type="public">__destruct()</method>
+				<method type="public">autoExecute($table, $data, $type, $where = '', $limit = 0, $use_cache = true, $use_null = false)</method>
+				<method type="public">autoExecuteWithNullValues($table, $values, $type, $where = '', $limit = 0)</method>
+				<method type="public">query($sql)</method>
+				<method type="public">insert($table, $data, $null_values = false, $use_cache = true, $type = Db::INSERT, $add_prefix = true)</method>
+				<method type="public">update($table, $data, $where = '', $limit = 0, $null_values = false, $use_cache = true, $add_prefix = true)</method>
+				<method type="public">delete($table, $where = '', $limit = 0, $use_cache = true, $add_prefix = true)</method>
+				<method type="public">execute($sql, $use_cache = true)</method>
+				<method type="public">executeS($sql, $array = true, $use_cache = true)</method>
+				<method type="public">getRow($sql, $use_cache = true)</method>
+				<method type="public">getValue($sql, $use_cache = true)</method>
+				<method type="public">numRows()</method>
+				<method type="public">q($sql, $use_cache = true)</method>
+				<method type="public">displayError($sql = false)</method>
+				<method type="public">escape($string, $html_ok = false)</method>
+				<method type="static">checkConnection($server, $user, $pwd, $db, $new_db_link = true, $engine = null, $timeout = 5)</method>
+				<method type="static">checkEncoding($server, $user, $pwd)</method>
+				<method type="static">hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix)</method>
+				<method type="static">s($sql, $use_cache = true)</method>
+				<method type="static">ps($sql, $use_cache = 1)</method>
+				<method type="static">ds($sql, $use_cache = 1)</method>
+				<method type="public">connect()</method>
+				<method type="public">disconnect()</method>
+				<method type="public">_query($sql)</method>
+				<method type="public">nextRow($result = false)</method>
+				<method type="public">_numRows($result)</method>
+				<method type="public">Insert_ID()</method>
+				<method type="public">Affected_Rows()</method>
+				<method type="public">getMsgError($query = false)</method>
+				<method type="public">getNumberError()</method>
+				<method type="public">getVersion()</method>
+				<method type="public">_escape($str)</method>
+				<method type="public">set_db($db_name)</method>
+				<method type="static">hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix)</method>
+				<method type="static">tryToConnect($server, $user, $pwd, $db, $newDbLink = true, $engine = null, $timeout = 5)</method>
+				<method type="static">_getPDO($host, $user, $password, $dbname, $timeout = 5)</method>
+				<method type="public">connect()</method>
+				<method type="public">disconnect()</method>
+				<method type="public">_query($sql)</method>
+				<method type="public">nextRow($result = false)</method>
+				<method type="public">_numRows($result)</method>
+				<method type="public">Insert_ID()</method>
+				<method type="public">Affected_Rows()</method>
+				<method type="public">getMsgError($query = false)</method>
+				<method type="public">getNumberError()</method>
+				<method type="public">getVersion()</method>
+				<method type="public">_escape($str)</method>
+				<method type="public">set_db($db_name)</method>
+				<method type="static">hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix)</method>
+				<method type="static">tryToConnect($server, $user, $pwd, $db, $newDbLink = true, $engine = null, $timeout = 5)</method>
+				<method type="static">tryUTF8($server, $user, $pwd)</method>
+				<method type="public">select($fields)</method>
+				<method type="public">from($table, $alias = null)</method>
+				<method type="public">join($join)</method>
+				<method type="public">leftJoin($table, $alias = null, $on = null)</method>
+				<method type="public">innerJoin($table, $alias = null, $on = null)</method>
+				<method type="public">leftOuterJoin($table, $alias = null, $on = null)</method>
+				<method type="public">naturalJoin($table, $alias = null)</method>
+				<method type="public">where($restriction)</method>
+				<method type="public">having($restriction)</method>
+				<method type="public">orderBy($fields)</method>
+				<method type="public">groupBy($fields)</method>
+				<method type="public">limit($limit, $offset = 0)</method>
+				<method type="public">build()</method>
+				<method type="public">__toString()</method>
+			</methods>
+		</class>
+		<class name="MySQL">
+			<methods>
+				<method type="public">connect()</method>
+				<method type="public">disconnect()</method>
+				<method type="public">_query($sql)</method>
+				<method type="public">nextRow($result = false)</method>
+				<method type="public">_numRows($result)</method>
+				<method type="public">Insert_ID()</method>
+				<method type="public">Affected_Rows()</method>
+				<method type="public">getMsgError($query = false)</method>
+				<method type="public">getNumberError()</method>
+				<method type="public">getVersion()</method>
+				<method type="public">_escape($str)</method>
+				<method type="public">set_db($db_name)</method>
+				<method type="static">hasTableWithSamePrefix($server, $user, $pwd, $db, $prefix)</method>
+				<method type="static">tryToConnect($server, $user, $pwd, $db, $newDbLink = true, $engine = null, $timeout = 5)</method>
+			</methods>
+		</class>
+		<class name="Delivery">
+			<methods>
+				<method type="public">getFields()</method>
+				<method type="public">__get($key)</method>
+				<method type="public">__set($key, $value)</method>
+				<method type="public">__call($method, $args)</method>
+				<method type="public">add($autodate = true, $nullValues = false, $categories = null)</method>
+				<method type="public">update($autodate = true, $nullValues = false, $categories = null)</method>
+				<method type="static">getIdByName($code)</method>
+				<method type="static">getCustomerDiscounts($id_lang, $id_customer, $active = false, $includeGenericOnes = true, $hasStock = false, Cart $cart = null)</method>
+				<method type="static">getVouchersToCartDisplay($id_lang, $id_customer)</method>
+				<method type="public">getValue($nb_discounts = 0, $order_total_products = 0, $shipping_fees = 0, $id_cart = false, $useTax = true, Currency $currency = null, Shop $shop = null)</method>
+				<method type="static">discountExists($discountName, $id_discount = 0)</method>
+				<method type="static">createOrderDiscount($order, $productList, $qtyList, $name, $shipping_cost = false, $id_category = 0, $subcategory = 0)</method>
+				<method type="static">display($value, $type, $currency = null)</method>
+				<method type="static">getInstance()</method>
+				<method type="public">__construct()</method>
+				<method type="public">dispatch()</method>
+				<method type="public">setRequestUri()</method>
+				<method type="public">loadRoutes()</method>
+				<method type="public">addRoute($route_id, $rule, $controller, $id_lang = null, array $keywords = array</method>
+				<method type="public">hasRoute($route_id, $id_lang = null)</method>
+				<method type="public">hasKeyword($route_id, $id_lang, $keyword)</method>
+				<method type="public">validateRoute($route_id, $rule, $errors = array</method>
+				<method type="public">createUrl($route_id, $id_lang = null, array $params = array</method>
+				<method type="public">getController()</method>
+				<method type="static">getControllers($dirs)</method>
+				<method type="static">getControllersInDirectory($dir)</method>
+			</methods>
+		</class>
+		<class name="Employee">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null, $id_shop = null)</method>
+				<method type="public">getFields()</method>
+				<method type="public">add($autodate = true, $null_values = true)</method>
+				<method type="static">getEmployees()</method>
+				<method type="public">getByEmail($email, $passwd = null)</method>
+				<method type="static">employeeExists($email)</method>
+				<method type="static">checkPassword($id_employee, $passwd)</method>
+				<method type="static">countProfile($id_profile, $active_only = false)</method>
+				<method type="public">isLastAdmin()</method>
+				<method type="public">setWsPasswd($passwd)</method>
+				<method type="public">isLoggedBack()</method>
+				<method type="public">logout()</method>
+				<method type="public">hasAuthOnShop($id_shop)</method>
+				<method type="public">hasAuthOnShopGroup($id_shop_group)</method>
+				<method type="public">getDefaultShopID()</method>
+				<method type="static">getEmployeesByProfile($id_profile, $active_only = false)</method>
+				<method type="public">isSuperAdmin()</method>
+				<method type="public">__toString()</method>
+				<method type="public">displayMessage()</method>
+				<method type="public">displayFileDebug($file, $line, $id = null)</method>
+				<method type="public">displayArgsDebug($args, $id)</method>
+			</methods>
+		</class>
+		<class name="Feature">
+			<methods>
+				<method type="static">getFeature($id_lang, $id_feature)</method>
+				<method type="static">getFeatures($id_lang)</method>
+				<method type="public">deleteSelection($selection)</method>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">update($nullValues = false)</method>
+				<method type="static">nbFeatures($id_lang)</method>
+				<method type="static">addFeatureImport($name, $position = false)</method>
+				<method type="static">getFeaturesForComparison($list_ids_product, $id_lang)</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="public">updatePosition($way, $position, $id_feature = null)</method>
+				<method type="static">cleanPositions()</method>
+				<method type="static">getHigherPosition()</method>
+			</methods>
+		</class>
+		<class name="FeatureValue">
+			<methods>
+				<method type="static">getFeatureValues($id_feature)</method>
+				<method type="static">getFeatureValuesWithLang($id_lang, $id_feature, $custom = false)</method>
+				<method type="static">getFeatureValueLang($id_feature_value)</method>
+				<method type="static">selectLang($lang, $id_lang)</method>
+				<method type="static">addFeatureValueImport($id_feature, $name)</method>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">update($nullValues = false)</method>
+			</methods>
+		</class>
+		<class name="FileUploader">
+			<methods>
+				<method type="public">__construct(array $allowedExtensions = array</method>
+				<method type="public">toBytes($str)</method>
+				<method type="public">handleUpload()</method>
+			</methods>
+		</class>
+		<class name="QqUploadedFileForm">
+			<methods>
+				<method type="public">save()</method>
+				<method type="public">copyImage($id_product, $id_image, $method = 'auto')</method>
+				<method type="public">getName()</method>
+				<method type="public">getSize()</method>
+				<method type="public">upload($path)</method>
+				<method type="public">save()</method>
+				<method type="public">copyImage($id_product, $id_image, $method = 'auto')</method>
+				<method type="public">getName()</method>
+				<method type="public">getSize()</method>
+				<method type="public">__construct($id = null, $id_lang = null, $id_shop = null)</method>
+				<method type="static">getGenders($id_lang = null)</method>
+				<method type="public">getImage($use_unknown = false)</method>
+			</methods>
+		</class>
+		<class name="Group">
+			<methods>
+				<method type="static">getGroups($id_lang, $id_shop = false)</method>
+				<method type="public">getCustomers($count = false, $start = 0, $limit = 0)</method>
+				<method type="static">getReduction($id_customer = null)</method>
+				<method type="static">getReductionByIdGroup($id_group)</method>
+				<method type="static">getPriceDisplayMethod($id_group)</method>
+				<method type="static">getDefaultPriceDisplayMethod()</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="static">isCurrentlyUsed($table = null, $has_active_column = false)</method>
+				<method type="static">truncateModulesRestrictions($id_group)</method>
+				<method type="static">truncateRestrictionsByModule($id_module)</method>
+				<method type="static">addModulesRestrictions($id_group, $modules, $shops = array</method>
+				<method type="static">addRestrictionsForModule($id_module, $shops = array</method>
+				<method type="static">getCurrent()</method>
+			</methods>
+		</class>
+		<class name="GroupReduction">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">_clearCache()</method>
+				<method type="public">_setCache()</method>
+				<method type="public">_updateCache()</method>
+				<method type="static">getGroupReductions($id_group, $id_lang)</method>
+				<method type="static">getValueForProduct($id_product, $id_group)</method>
+				<method type="static">doesExist($id_group, $id_category)</method>
+				<method type="static">getGroupByCategoryId($id_category)</method>
+				<method type="static">getGroupReductionByCategoryId($id_category)</method>
+				<method type="static">setProductReduction($id_product, $id_group, $id_category, $reduction)</method>
+				<method type="static">deleteProductReduction($id_product)</method>
+				<method type="static">duplicateReduction($id_product_old, $id_product)</method>
+				<method type="static">deleteCategory($id_category)</method>
+			</methods>
+		</class>
+		<class name="Guest">
+			<methods>
+				<method type="public">userAgent()</method>
+				<method type="public">getLanguage($acceptLanguage)</method>
+				<method type="public">getBrowser($userAgent)</method>
+				<method type="public">getOs($userAgent)</method>
+				<method type="static">getFromCustomer($id_customer)</method>
+				<method type="public">mergeWithCustomer($id_guest, $id_customer)</method>
+				<method type="static">setNewGuest($cookie)</method>
+			</methods>
+		</class>
+		<class name="HelpAccess">
+			<methods>
+				<method type="static">trackClick($label, $version)</method>
+				<method type="static">getVersion($label)</method>
+				<method type="static">retrieveInfos($label, $iso_lang, $country, $version)</method>
+			</methods>
+		</class>
+		<class name="Helper">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">setTpl($tpl)</method>
+				<method type="public">createTemplate($tpl_name)</method>
+				<method type="public">generate()</method>
+				<method type="static">renderAdminCategorieTree($translations,</method>
+				<method type="public">renderCategoryTree($root = null,</method>
+				<method type="public">l($string, $class = 'AdminTab', $addslashes = false, $htmlentities = true)</method>
+				<method type="public">renderRequiredFields($class_name, $identifier, $table_fields)</method>
+				<method type="static">renderShopList()</method>
+				<method type="public">__construct()</method>
+				<method type="public">generateForm($fields_form)</method>
+				<method type="public">generate()</method>
+				<method type="public">getFieldsRequired()</method>
+				<method type="public">renderAssoShop($disable_shared = false)</method>
+				<method type="public">__construct($label, $iso_lang, $country, $ps_version)</method>
+				<method type="public">generate()</method>
+				<method type="public">__construct()</method>
+				<method type="public">generateList($list, $fields_display)</method>
+				<method type="public">displayEnableLink($token, $id, $value, $active, $id_category = null, $id_product = null)</method>
+				<method type="public">displayListContent()</method>
+				<method type="public">displayDuplicateLink($token = null, $id, $name = null)</method>
+				<method type="public">displayDetailsLink($token = null, $id, $name = null)</method>
+				<method type="public">displayViewLink($token = null, $id, $name = null)</method>
+				<method type="public">displayEditLink($token = null, $id, $name = null)</method>
+				<method type="public">displayDeleteLink($token = null, $id, $name = null)</method>
+				<method type="public">displayDefaultLink($token = null, $id, $name = null)</method>
+				<method type="public">displayListHeader()</method>
+				<method type="public">displayListFooter()</method>
+				<method type="public">__construct()</method>
+				<method type="public">generateOptions($option_list)</method>
+				<method type="public">displayOptionTypeImage($key, $field, $value)</method>
+				<method type="public">displayOptionTypePrice($key, $field, $value)</method>
+				<method type="public">displayOptionTypeDisabled($key, $field, $value)</method>
+				<method type="public">getOptionValue($key, $field)</method>
+			</methods>
+		</class>
+		<class name="HelperView">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">generateView()</method>
+			</methods>
+		</class>
+		<class name="Hook">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="static">getHooks($position = false)</method>
+				<method type="static">getIdByName($hook_name)</method>
+				<method type="static">getHookAliasList()</method>
+				<method type="static">getRetroHookName($hook_name)</method>
+				<method type="static">getHookModuleList()</method>
+				<method type="static">getModulesFromHook($id_hook, $id_module = null)</method>
+				<method type="static">getHookModuleExecList($hook_name = null)</method>
+				<method type="static">exec($hook_name, $hook_args = array</method>
+				<method type="static">wrapLiveEdit($display, $moduleInstance, $id_hook)</method>
+				<method type="static">updateOrderStatus($newOrderStatusId, $id_order)</method>
+				<method type="static">postUpdateOrderStatus($newOrderStatusId, $id_order)</method>
+				<method type="static">orderConfirmation($id_order)</method>
+				<method type="static">paymentReturn($id_order, $id_module)</method>
+				<method type="static">PDFInvoice($pdf, $id_order)</method>
+				<method type="static">backBeforePayment($module)</method>
+				<method type="static">updateCarrier($id_carrier, $carrier)</method>
+				<method type="static">preloadHookModulesCache()</method>
+				<method type="static">get($hookName)</method>
+				<method type="static">newOrder($cart, $order, $customer, $currency, $orderStatus)</method>
+				<method type="static">updateQuantity($product, $order = null)</method>
+				<method type="static">productFooter($product, $category)</method>
+				<method type="static">productOutOfStock($product)</method>
+				<method type="static">addProduct($product)</method>
+				<method type="static">updateProduct($product)</method>
+				<method type="static">deleteProduct($product)</method>
+				<method type="static">updateProductAttribute($id_product_attribute)</method>
+			</methods>
+		</class>
+		<class name="Image">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">getImages($id_lang, $id_product)</method>
+				<method type="static">getAllImages()</method>
+				<method type="static">getImagesTotal($id_product)</method>
+				<method type="static">getHighestPosition($id_product)</method>
+				<method type="static">deleteCover($id_product)</method>
+				<method type="static">getCover($id_product)</method>
+				<method type="static">duplicateProductImages($id_product_old, $id_product_new, $combination_images)</method>
+				<method type="static">replaceAttributeImageAssociationId($combination_images, $saved_id, $id_image)</method>
+				<method type="static">duplicateAttributeImageAssociations($combination_images)</method>
+				<method type="public">positionImage($position, $direction)</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">getSize($type)</method>
+				<method type="static">clearTmpDir()</method>
+				<method type="public">deleteProductAttributeImage()</method>
+				<method type="public">deleteImage($force_delete = false)</method>
+				<method type="static">deleteAllImages($path, $format = 'jpg')</method>
+				<method type="public">getExistingImgPath()</method>
+				<method type="public">getImgFolder()</method>
+				<method type="public">createImgFolder()</method>
+				<method type="public">getImgPath()</method>
+				<method type="static">getImgFolderStatic($id_image)</method>
+				<method type="static">moveToNewFileSystem($max_execution_time = 0)</method>
+				<method type="static">testFileSystem()</method>
+				<method type="public">getPathForCreation()</method>
+				<method type="static">thumbnail($image, $cache_image, $size, $image_type = 'jpg', $disable_cache = false)</method>
+				<method type="static">checkImageMemoryLimit($image)</method>
+				<method type="static">resize($src_file, $dst_file, $dst_width = null, $dst_height = null, $file_type = 'jpg', $force_type = false)</method>
+				<method type="static">isRealImage($filename, $file_mime_type = null, $mime_type_list = null)</method>
+				<method type="static">isCorrectImageFileExt($filename)</method>
+				<method type="static">validateUpload($file, $max_file_size = 0)</method>
+				<method type="static">validateIconUpload($file, $max_file_size = 0)</method>
+				<method type="static">cut($src_file, $dst_file, $dst_width = null, $dst_height = null, $file_type = 'jpg', $dst_x = 0, $dst_y = 0)</method>
+				<method type="static">create($type, $filename)</method>
+				<method type="static">createWhiteImage($width, $height)</method>
+				<method type="static">write($type, $resource, $filename)</method>
+			</methods>
+		</class>
+		<class name="ImageType">
+			<methods>
+				<method type="static">getImagesTypes($type = null, $id_theme = false)</method>
+				<method type="static">typeAlreadyExists($typeName)</method>
+				<method type="static">getByNameNType($name, $type)</method>
+			</methods>
+		</class>
+		<class name="Language">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null)</method>
+				<method type="public">getFields()</method>
+				<method type="public">_generateFiles($newIso = null)</method>
+				<method type="public">moveToIso($newIso)</method>
+				<method type="public">_getThemesList()</method>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">toggleStatus()</method>
+				<method type="public">checkFiles()</method>
+				<method type="static">checkFilesWithIsoCode($iso_code)</method>
+				<method type="static">getFilesList($iso_from, $theme_from, $iso_to = false, $theme_to = false, $select = false, $check = false, $modules = false)</method>
+				<method type="public">loadUpdateSQL()</method>
+				<method type="static">recurseDeleteDir($dir)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($selection)</method>
+				<method type="static">getLanguages($active = true, $id_shop = false)</method>
+				<method type="static">getLanguage($id_lang)</method>
+				<method type="static">getIsoById($id_lang)</method>
+				<method type="static">getIdByIso($iso_code)</method>
+				<method type="static">getLanguageCodeByIso($iso_code)</method>
+				<method type="static">getIsoIds($active = true)</method>
+				<method type="static">copyLanguageData($from, $to)</method>
+				<method type="static">loadLanguages()</method>
+				<method type="public">update($nullValues = false)</method>
+				<method type="static">checkAndAddLanguage($iso_code)</method>
+				<method type="static">_copyNoneFlag($id)</method>
+				<method type="static">isInstalled($iso_code)</method>
+				<method type="static">countActiveLanguages()</method>
+				<method type="static">isMultiLanguageActivated()</method>
+			</methods>
+		</class>
+		<class name="Link">
+			<methods>
+				<method type="public">__construct($protocol_link = null, $protocol_content = null)</method>
+				<method type="public">getProductDeletePictureLink($product, $id_picture)</method>
+				<method type="public">getProductLink($product, $alias = null, $category = null, $ean13 = null, $id_lang = null, $id_shop = null, $ipa = 0, $force_routes = false)</method>
+				<method type="public">getCategoryLink($category, $alias = null, $id_lang = null, $selected_filters = null)</method>
+				<method type="public">getCMSCategoryLink($category, $alias = null, $id_lang = null)</method>
+				<method type="public">getCMSLink($cms, $alias = null, $ssl = false, $id_lang = null)</method>
+				<method type="public">getSupplierLink($supplier, $alias = null, $id_lang = null)</method>
+				<method type="public">getManufacturerLink($manufacturer, $alias = null, $id_lang = null)</method>
+				<method type="public">getModuleLink($module, $controller = 'default', array $params = array</method>
+				<method type="public">getAdminLink($controller, $with_token = true)</method>
+				<method type="public">getImageLink($name, $ids, $type = null)</method>
+				<method type="public">getMediaLink($filepath)</method>
+				<method type="public">getPageLink($controller, $ssl = false, $id_lang = null, $request = null, $request_url_encode = false)</method>
+				<method type="public">getCatImageLink($name, $id_category, $type = null)</method>
+				<method type="public">getLanguageLink($id_lang, Context $context = null)</method>
+				<method type="public">goPage($url, $p)</method>
+				<method type="public">getPaginationLink($type, $id_object, $nb = false, $sort = false, $pagination = false, $array = false)</method>
+				<method type="public">addSortDetails($url, $orderby, $orderway)</method>
+				<method type="public">getLangLink($id_lang = null, Context $context = null)</method>
+			</methods>
+		</class>
+		<class name="LocalizationPack">
+			<methods>
+				<method type="public">loadLocalisationPack($file, $selection, $install_mode = false)</method>
+				<method type="public">_installStates($xml)</method>
+				<method type="public">_installTaxes($xml)</method>
+				<method type="public">_installCurrencies($xml, $install_mode = false)</method>
+				<method type="public">_installLanguages($xml, $install_mode = false)</method>
+				<method type="public">_installUnits($xml)</method>
+				<method type="public">installModules($xml)</method>
+				<method type="public">installConfiguration($xml)</method>
+				<method type="public">updateDefaultGroupDisplayMethod($xml)</method>
+				<method type="public">getErrors()</method>
+			</methods>
+		</class>
+		<class name="AbstractLogger">
+			<methods>
+				<method type="public">__construct($level = self::INFO)</method>
+				<method type="abstract">logMessage($message, $level)</method>
+				<method type="public">log($message, $level = self::DEBUG)</method>
+				<method type="public">logDebug($message)</method>
+				<method type="public">logInfo($message)</method>
+				<method type="public">logWarning($message)</method>
+				<method type="public">logError($message)</method>
+				<method type="public">logMessage($message, $level)</method>
+				<method type="public">setFilename($filename)</method>
+				<method type="public">getFilename()</method>
+			</methods>
+		</class>
+		<class name="Logger">
+			<methods>
+				<method type="static">sendByMail($log)</method>
+				<method type="static">addLog($message, $severity = 1, $error_code = null, $object_type = null, $object_id = null, $allow_duplicate = false)</method>
+				<method type="public">getHash()</method>
+				<method type="public">_isPresent()</method>
+			</methods>
+		</class>
+		<class name="Mail">
+			<methods>
+				<method type="static">Send($id_lang, $template, $subject, $template_vars, $to,</method>
+				<method type="static">sendMailTest($smtpChecked, $smtpServer, $content, $subject, $type, $to, $from, $smtpLogin, $smtpPassword, $smtpPort = 25, $smtpEncryption)</method>
+				<method type="static">l($string, $id_lang = null, Context $context = null)</method>
+			</methods>
+		</class>
+		<class name="Manufacturer">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($selection)</method>
+				<method type="public">getManufacturerAddress()</method>
+				<method type="static">getManufacturers($get_nb_products = false, $id_lang = 0, $active = true, $p = false,</method>
+				<method type="static">getNameById($id_manufacturer)</method>
+				<method type="static">getIdByName($name)</method>
+				<method type="public">getLink()</method>
+				<method type="static">getProducts($id_manufacturer, $id_lang, $p, $n, $order_by = null, $order_way = null,</method>
+				<method type="public">getProductsLite($id_lang)</method>
+				<method type="static">manufacturerExists($id_manufacturer)</method>
+				<method type="public">getAddresses($id_lang)</method>
+				<method type="public">getWsAddresses()</method>
+				<method type="public">setWsAddresses($id_addresses)</method>
+			</methods>
+		</class>
+		<class name="Media">
+			<methods>
+				<method type="static">minifyHTML($html_content)</method>
+				<method type="static">minifyHTMLpregCallback($preg_matches)</method>
+				<method type="static">packJSinHTML($html_content)</method>
+				<method type="static">packJSinHTMLpregCallback($preg_matches)</method>
+				<method type="static">packJS($js_content)</method>
+				<method type="static">minifyCSS($css_content, $fileuri = false, $import_url = array</method>
+				<method type="static">getJSPath($js_uri)</method>
+				<method type="static">getCSSPath($css_uri, $css_media_type = 'all')</method>
+				<method type="static">getJqueryPath($version = null, $folder = null, $minifier = true)</method>
+				<method type="static">getJqueryUIPath($component, $theme, $check_dependencies)</method>
+				<method type="static">getJqueryPluginPath($name, $folder)</method>
+				<method type="static">getJqueryPluginCSSPath($name)</method>
+				<method type="static">cccCss($css_files)</method>
+				<method type="static">cccJS($js_files)</method>
+			</methods>
+		</class>
+		<class name="Message">
+			<methods>
+				<method type="static">getMessageByCartId($id_cart)</method>
+				<method type="static">getMessagesByOrderId($id_order, $private = false, Context $context = null)</method>
+				<method type="static">getMessagesByCartId($id_cart, $private = false, Context $context = null)</method>
+				<method type="static">markAsReaded($id_message, $id_employee)</method>
+			</methods>
+		</class>
+		<class name="Meta">
+			<methods>
+				<method type="static">getPages($exclude_filled = false, $add_page = false)</method>
+				<method type="static">getMetas()</method>
+				<method type="static">getMetasByIdLang($id_lang)</method>
+				<method type="static">getMetaByPage($page, $id_lang)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($selection)</method>
+				<method type="static">getEquivalentUrlRewrite($new_id_lang, $id_lang, $url_rewrite)</method>
+				<method type="static">getMetaTags($id_lang, $page_name, $title = '')</method>
+				<method type="static">getHomeMetas($id_lang, $page_name)</method>
+				<method type="static">getProductMetas($id_product, $id_lang, $page_name)</method>
+				<method type="static">getCategoryMetas($id_category, $id_lang, $page_name, $title = '')</method>
+				<method type="static">getManufacturerMetas($id_manufacturer, $id_lang, $page_name)</method>
+				<method type="static">getSupplierMetas($id_supplier, $id_lang, $page_name)</method>
+				<method type="static">getCmsMetas($id_cms, $id_lang, $page_name)</method>
+				<method type="static">getCmsCategoryMetas($id_cms_category, $id_lang, $page_name)</method>
+				<method type="static">completeMetaTags($meta_tags, $default_value, Context $context = null)</method>
+			</methods>
+		</class>
+		<class name="CarrierModule">
+			<methods>
+				<method type="abstract">getOrderShippingCost($params, $shipping_cost)</method>
+				<method type="abstract">getOrderShippingCostExternal($params)</method>
+			</methods>
+		</class>
+		<class name="ImportModule">
+			<methods>
+				<method type="public">__destruct()</method>
+				<method type="public">initDatabaseConnection()</method>
+				<method type="public">ExecuteS($query)</method>
+				<method type="public">Execute($query)</method>
+				<method type="public">getValue($query)</method>
+				<method type="static">getImportModulesOnDisk()</method>
+				<method type="abstract">getDefaultIdLang()</method>
+			</methods>
+		</class>
+		<class name="Module">
+			<methods>
+				<method type="public">__construct($name = null, Context $context = null)</method>
+				<method type="public">install()</method>
+				<method type="public">setUpgradeMessage($upgrade_detail)</method>
+				<method type="static">initUpgradeModule($module)</method>
+				<method type="public">runUpgradeModule()</method>
+				<method type="static">upgradeModuleVersion($name, $version)</method>
+				<method type="static">needUpgrade($module)</method>
+				<method type="static">loadUpgradeVersionList($module_name, $module_version, $registered_version)</method>
+				<method type="static">getUpgradeStatus($module_name)</method>
+				<method type="public">uninstall()</method>
+				<method type="static">enableByName($name)</method>
+				<method type="public">enable($forceAll = false)</method>
+				<method type="static">disableByName($name)</method>
+				<method type="public">disable($forceAll = false)</method>
+				<method type="public">displayFlags($languages, $default_language, $ids, $id, $return = false, $use_vars_instead_of_ids = false)</method>
+				<method type="public">registerHook($hook_name, $shop_list = null)</method>
+				<method type="public">unregisterHook($hook_id, $shop_list = null)</method>
+				<method type="public">unregisterExceptions($hook_id, $shop_list = null)</method>
+				<method type="public">registerExceptions($id_hook, $excepts, $shop_list = null)</method>
+				<method type="public">editExceptions($id_hook, $excepts)</method>
+				<method type="static">getModuleNameFromClass($currentClass)</method>
+				<method type="static">getInstanceByName($module_name)</method>
+				<method type="static">getInstanceById($id_module)</method>
+				<method type="static">configXmlStringFormat($string)</method>
+				<method type="static">getModuleName($module)</method>
+				<method type="static">getModulesOnDisk($useConfig = false, $loggedOnAddons = false, $id_employee = false)</method>
+				<method type="static">getModulesDirOnDisk()</method>
+				<method type="static">getNonNativeModuleList()</method>
+				<method type="static">getModulesInstalled($position = 0)</method>
+				<method type="static">hookExec($hook_name, $hookArgs = array</method>
+				<method type="static">hookExecPayment()</method>
+				<method type="static">preCall($module_name)</method>
+				<method type="static">getPaymentModules()</method>
+				<method type="static">findTranslation($name, $string, $source)</method>
+				<method type="public">l($string, $specific = false, $id_lang = null)</method>
+				<method type="public">updatePosition($id_hook, $way, $position = null)</method>
+				<method type="public">cleanPositions($id_hook, $shop_list = null)</method>
+				<method type="public">displayError($error)</method>
+				<method type="public">displayConfirmation($string)</method>
+				<method type="public">getExceptions($hookID, $dispatch = false)</method>
+				<method type="static">isInstalled($module_name)</method>
+				<method type="static">isEnabled($module_name)</method>
+				<method type="public">isRegisteredInHook($hook)</method>
+				<method type="static">_isTemplateOverloadedStatic($module_name, $template)</method>
+				<method type="public">_isTemplateOverloaded($template)</method>
+				<method type="public">display($file, $template, $cacheId = null, $compileId = null)</method>
+				<method type="public">getTemplatePath($template)</method>
+				<method type="public">_getApplicableTemplateDir($template)</method>
+				<method type="public">isCached($template, $cacheId = null, $compileId = null)</method>
+				<method type="public">_clearCache($template, $cache_id = null, $compile_id = null)</method>
+				<method type="public">_generateConfigXml()</method>
+				<method type="public">isHookableOn($hook_name)</method>
+				<method type="public">getPermission($variable, $employee = null)</method>
+				<method type="static">getPermissionStatic($id_module, $variable, $employee = null)</method>
+				<method type="static">getAuthorizedModules($group_id)</method>
+				<method type="static">getModuleIdByName($name)</method>
+				<method type="public">getErrors()</method>
+				<method type="public">getConfirmations()</method>
+				<method type="public">getLocalPath()</method>
+				<method type="public">getPathUri()</method>
+				<method type="public">getPosition($id_hook)</method>
+				<method type="public">adminDisplayWarning($msg)</method>
+				<method type="public">adminDisplayInformation($msg)</method>
+				<method type="public">installOverrides()</method>
+				<method type="public">uninstallOverrides()</method>
+				<method type="public">addOverride($classname)</method>
+				<method type="public">removeOverride($classname)</method>
+			</methods>
+		</class>
+		<class name="ModuleGraph">
+			<methods>
+				<method type="abstract">getData($layers)</method>
+				<method type="public">setEmployee($id_employee)</method>
+				<method type="public">setLang($id_lang)</method>
+				<method type="public">setDateGraph($layers, $legend = false)</method>
+				<method type="public">csvExport($datas)</method>
+				<method type="public">_displayCsv()</method>
+				<method type="public">create($render, $type, $width, $height, $layers)</method>
+				<method type="public">draw()</method>
+				<method type="public">setOption($option, $layers = 1)</method>
+				<method type="public">engine($params)</method>
+				<method type="static">getEmployee($employee = null, Context $context = null)</method>
+				<method type="public">getDate()</method>
+				<method type="static">getDateBetween($employee = null)</method>
+				<method type="public">getLang()</method>
+			</methods>
+		</class>
+		<class name="ModuleGraphEngine">
+			<methods>
+				<method type="public">__construct($type)</method>
+				<method type="public">install()</method>
+				<method type="static">getGraphEngines()</method>
+				<method type="abstract">createValues($values)</method>
+				<method type="abstract">setSize($width, $height)</method>
+				<method type="abstract">setLegend($legend)</method>
+				<method type="abstract">setTitles($titles)</method>
+				<method type="abstract">draw()</method>
+			</methods>
+		</class>
+		<class name="ModuleGrid">
+			<methods>
+				<method type="abstract">getData()</method>
+				<method type="public">setEmployee($id_employee)</method>
+				<method type="public">setLang($id_lang)</method>
+				<method type="public">create($render, $type, $width, $height, $start, $limit, $sort, $dir)</method>
+				<method type="public">render()</method>
+				<method type="public">engine($params)</method>
+				<method type="public">csvExport($datas)</method>
+				<method type="public">_displayCsv()</method>
+				<method type="public">getDate()</method>
+				<method type="public">getLang()</method>
+			</methods>
+		</class>
+		<class name="ModuleGridEngine">
+			<methods>
+				<method type="public">__construct($type)</method>
+				<method type="public">install()</method>
+				<method type="static">getGridEngines()</method>
+				<method type="abstract">setValues($values)</method>
+				<method type="abstract">setTitle($title)</method>
+				<method type="abstract">setSize($width, $height)</method>
+				<method type="abstract">setTotalCount($totalCount)</method>
+				<method type="abstract">setLimit($start, $limit)</method>
+				<method type="abstract">render()</method>
+			</methods>
+		</class>
+		<class name="Notification">
+			<methods>
+				<method type="public">__construct()</method>
+				<method type="public">getLastElements()</method>
+				<method type="public">installDb()</method>
+				<method type="static">getLastElementsIdsByType($type, $id_last_element)</method>
+				<method type="public">updateEmployeeLastElement($type)</method>
+			</methods>
+		</class>
+		<class name="ObjectModel">
+			<methods>
+				<method type="static">getValidationRules($class = __CLASS__)</method>
+				<method type="public">__construct($id = null, $id_lang = null, $id_shop = null)</method>
+				<method type="public">getFields()</method>
+				<method type="public">getFieldsShop()</method>
+				<method type="public">getFieldsLang()</method>
+				<method type="public">formatFields($type, $id_lang = null)</method>
+				<method type="static">formatValue($value, $type, $with_quotes = false)</method>
+				<method type="public">save($null_values = false, $autodate = true)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($selection)</method>
+				<method type="public">toggleStatus()</method>
+				<method type="public">getTranslationsFields($fields_array)</method>
+				<method type="public">makeTranslationFields($fields, $fields_array, $id_language)</method>
+				<method type="public">validateFields($die = true, $error_return = false)</method>
+				<method type="public">validateFieldsLang($die = true, $error_return = false)</method>
+				<method type="public">validateField($field, $value, $id_lang = null)</method>
+				<method type="static">displayFieldName($field, $class = __CLASS__, $htmlentities = true, Context $context = null)</method>
+				<method type="public">validateControler($htmlentities = true)</method>
+				<method type="public">validateController($htmlentities = true)</method>
+				<method type="public">getWebserviceParameters($ws_params_attribute_name = null)</method>
+				<method type="public">getWebserviceObjectList($sql_join, $sql_filter, $sql_sort, $sql_limit)</method>
+				<method type="public">validateFieldsRequiredDatabase($htmlentities = true)</method>
+				<method type="public">getFieldsRequiredDatabase($all = false)</method>
+				<method type="public">addFieldsRequiredDatabase($fields)</method>
+				<method type="public">clearCache($all = false)</method>
+				<method type="public">isAssociatedToShop($id_shop = null)</method>
+				<method type="public">associateTo($id_shops)</method>
+				<method type="public">getAssociatedShops()</method>
+				<method type="public">duplicateShops($id)</method>
+				<method type="public">hasMultishopEntries()</method>
+				<method type="public">isMultishop()</method>
+				<method type="public">isLangMultishop()</method>
+				<method type="static">updateMultishopTable($classname, $data, $where, $specific_where = '')</method>
+				<method type="public">deleteImage($force_delete = false)</method>
+				<method type="static">existsInDatabase($id_entity, $table)</method>
+				<method type="static">isCurrentlyUsed($table = null, $has_active_column = false)</method>
+				<method type="public">hydrate(array $data, $id_lang = null)</method>
+				<method type="static">hydrateCollection($class, array $datas, $id_lang = null)</method>
+				<method type="static">getDefinition($class, $field = null)</method>
+				<method type="public">setDefinitionRetrocompatibility()</method>
+				<method type="public">getFieldByLang($field_name, $id_lang = null)</method>
+				<method type="public">setFieldsToUpdate(array $fields)</method>
+			</methods>
+		</class>
+		<class name="Order">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null)</method>
+				<method type="public">getFields()</method>
+				<method type="public">add($autodate = true, $null_values = true)</method>
+				<method type="public">getTaxCalculationMethod()</method>
+				<method type="public">deleteProduct($order, $orderDetail, $quantity)</method>
+				<method type="public">getCartProducts()</method>
+				<method type="public">_deleteProduct($orderDetail, $quantity)</method>
+				<method type="public">deleteCustomization($id_customization, $quantity, $orderDetail)</method>
+				<method type="public">getHistory($id_lang, $id_order_state = false, $no_hidden = false, $filters = 0)</method>
+				<method type="public">getProductsDetail()</method>
+				<method type="public">getFirstMessage()</method>
+				<method type="public">setProductPrices($row)</method>
+				<method type="public">getProducts($products = false, $selectedProducts = false, $selectedQty = false)</method>
+				<method type="static">getIdOrderProduct($id_customer, $id_product)</method>
+				<method type="public">setProductCustomizedDatas($product, $customized_datas)</method>
+				<method type="public">setProductCurrentStock($product)</method>
+				<method type="public">setProductImageInformations($product)</method>
+				<method type="public">getTaxesAverageUsed()</method>
+				<method type="public">getVirtualProducts()</method>
+				<method type="public">isVirtual($strict = true)</method>
+				<method type="public">getDiscounts($details = false)</method>
+				<method type="public">getCartRules()</method>
+				<method type="static">getDiscountsCustomer($id_customer, $id_cart_rule)</method>
+				<method type="public">getCurrentState()</method>
+				<method type="public">getCurrentStateFull($id_lang)</method>
+				<method type="public">hasBeenDelivered()</method>
+				<method type="public">hasProductReturned()</method>
+				<method type="public">hasBeenPaid()</method>
+				<method type="public">hasBeenShipped()</method>
+				<method type="public">isInPreparation()</method>
+				<method type="public">isPaidAndShipped()</method>
+				<method type="static">getCustomerOrders($id_customer, $showHiddenStatus = false, Context $context = null)</method>
+				<method type="static">getOrdersIdByDate($date_from, $date_to, $id_customer = null, $type = null)</method>
+				<method type="static">getOrdersWithInformations($limit = null, Context $context = null)</method>
+				<method type="static">getOrdersIdInvoiceByDate($date_from, $date_to, $id_customer = null, $type = null)</method>
+				<method type="static">getOrderIdsByStatus($id_order_state)</method>
+				<method type="public">getTotalProductsWithoutTaxes($products = false)</method>
+				<method type="public">getTotalProductsWithTaxes($products = false)</method>
+				<method type="public">getCustomer()</method>
+				<method type="static">getCustomerNbOrders($id_customer)</method>
+				<method type="static">getOrderByCartId($id_cart)</method>
+				<method type="public">addDiscount($id_cart_rule, $name, $value)</method>
+				<method type="public">addCartRule($id_cart_rule, $name, $values, $id_order_invoice = 0)</method>
+				<method type="public">getNumberOfDays()</method>
+				<method type="public">isReturnable()</method>
+				<method type="static">getLastInvoiceNumber()</method>
+				<method type="public">setInvoice($use_existing_payment = false)</method>
+				<method type="public">setDelivery()</method>
+				<method type="static">getByDelivery($id_delivery)</method>
+				<method type="static">getByReference($reference)</method>
+				<method type="public">getTotalWeight()</method>
+				<method type="static">getInvoice($id_invoice)</method>
+				<method type="public">isAssociatedAtGuest($email)</method>
+				<method type="static">getCartIdStatic($id_order, $id_customer = 0)</method>
+				<method type="public">getWsOrderRows()</method>
+				<method type="public">setCurrentState($id_order_state, $id_employee = 0)</method>
+				<method type="public">addWs($autodate = true, $nullValues = false)</method>
+				<method type="public">deleteAssociations()</method>
+				<method type="public">getPreviousOrderId()</method>
+				<method type="public">getNextOrderId()</method>
+				<method type="public">getOrderDetailList()</method>
+				<method type="static">generateReference()</method>
+				<method type="public">orderContainProduct($id_product)</method>
+				<method type="public">useOneAfterAnotherTaxComputationMethod()</method>
+				<method type="public">getOrderPaymentCollection()</method>
+				<method type="public">addOrderPayment($amount_paid, $payment_method = null, $payment_transaction_id = null, $currency = null, $date = null, $order_invoice = null)</method>
+				<method type="public">getDocuments()</method>
+				<method type="public">getReturn()</method>
+				<method type="public">getShipping()</method>
+				<method type="public">getOrderSlipsCollection()</method>
+				<method type="public">getInvoicesCollection()</method>
+				<method type="public">getDeliverySlipsCollection()</method>
+				<method type="public">getNotPaidInvoicesCollection()</method>
+				<method type="public">getTotalPaid($currency = null)</method>
+				<method type="public">getOrdersTotalPaid()</method>
+				<method type="public">updateShippingCost($amount)</method>
+				<method type="public">getProductTaxesBreakdown()</method>
+				<method type="public">getShippingTaxesBreakdown()</method>
+				<method type="public">getWrappingTaxesBreakdown()</method>
+				<method type="public">getEcoTaxTaxesBreakdown()</method>
+				<method type="public">hasInvoice()</method>
+				<method type="public">getWarehouseList()</method>
+				<method type="public">getCurrentOrderState()</method>
+				<method type="public">getWebserviceObjectList($sql_join, $sql_filter, $sql_sort, $sql_limit)</method>
+				<method type="public">getBrother()</method>
+				<method type="public">getOrderPayments()</method>
+				<method type="public">getUniqReference()</method>
+				<method type="static">getUniqReferenceOf($id_order)</method>
+			</methods>
+		</class>
+		<class name="OrderCarrier">
+		</class>
+		<class name="OrderCartRule">
+		</class>
+		<class name="OrderDetail">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null, $context = null)</method>
+				<method type="static">getDownloadFromHash($hash)</method>
+				<method type="static">incrementDownload($id_order_detail, $increment = 1)</method>
+				<method type="public">getTaxCalculator()</method>
+				<method type="static">getTaxCalculatorStatic($id_order_detail)</method>
+				<method type="public">saveTaxCalculator(Order $order)</method>
+				<method type="static">getList($id_order)</method>
+				<method type="public">setVirtualProductInformation($product)</method>
+				<method type="public">checkProductStock($product, $id_order_state)</method>
+				<method type="public">setProductTax(Order $order, $product)</method>
+				<method type="public">setSpecificPrice(Order $order)</method>
+				<method type="public">setDetailProductPrice(Order $order, Cart $cart, $product)</method>
+				<method type="public">create(Order $order, Cart $cart, $product, $id_order_state, $id_order_invoice, $use_taxes = true, $id_warehouse = 0)</method>
+				<method type="public">createList(Order $order, Cart $cart, $id_order_state, $product_list, $id_order_invoice = 0, $use_taxes = true, $id_warehouse = 0)</method>
+				<method type="public">getStockState()</method>
+				<method type="public">setShippingCost(Order $order, $product)</method>
+				<method type="public">getWsTaxes()</method>
+				<method type="public">__get($key)</method>
+				<method type="public">__set($key, $value)</method>
+				<method type="public">__call($method, $args)</method>
+			</methods>
+		</class>
+		<class name="OrderHistory">
+			<methods>
+				<method type="public">changeIdOrderState($new_order_state, $id_order, $use_existing_payment = false)</method>
+				<method type="static">getLastOrderState($id_order)</method>
+				<method type="public">addWithemail($autodate = true, $template_vars = false, Context $context = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">isValidated()</method>
+			</methods>
+		</class>
+		<class name="OrderInvoice">
+			<methods>
+				<method type="public">getProductsDetail()</method>
+				<method type="public">getProducts($products = false, $selectedProducts = false, $selectedQty = false)</method>
+				<method type="public">setProductCustomizedDatas($product, $customized_datas)</method>
+				<method type="public">setProductCurrentStock($product)</method>
+				<method type="public">setProductImageInformations($product)</method>
+				<method type="public">useOneAfterAnotherTaxComputationMethod()</method>
+				<method type="public">getProductTaxesBreakdown()</method>
+				<method type="public">getShippingTaxesBreakdown($order)</method>
+				<method type="public">getWrappingTaxesBreakdown()</method>
+				<method type="public">getEcoTaxTaxesBreakdown()</method>
+				<method type="static">getByDateInterval($date_from, $date_to)</method>
+				<method type="static">getByStatus($id_order_state)</method>
+				<method type="static">getByDeliveryDateInterval($date_from, $date_to)</method>
+				<method type="static">getCarrier($id_order_invoice)</method>
+				<method type="static">getCarrierId($id_order_invoice)</method>
+				<method type="static">retrieveOneById($id)</method>
+				<method type="public">getTotalPaid()</method>
+				<method type="public">getRestPaid()</method>
+				<method type="public">getSibling()</method>
+				<method type="public">getSiblingTotal($mod = OrderInvoice::TAX_INCL)</method>
+				<method type="public">getGlobalRestPaid()</method>
+				<method type="public">isPaid()</method>
+				<method type="public">getOrderPaymentCollection()</method>
+				<method type="public">getInvoiceNumberFormatted($id_lang)</method>
+				<method type="public">saveCarrierTaxCalculator(array $taxes_amount)</method>
+			</methods>
+		</class>
+		<class name="OrderMessage">
+			<methods>
+				<method type="static">getOrderMessages($id_lang)</method>
+			</methods>
+		</class>
+		<class name="OrderPayment">
+			<methods>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="static">getByOrderId($id_order)</method>
+				<method type="static">getByOrderReference($order_reference)</method>
+				<method type="static">getByInvoiceId($id_invoice)</method>
+				<method type="public">getOrderInvoice($id_order)</method>
+			</methods>
+		</class>
+		<class name="OrderReturn">
+			<methods>
+				<method type="public">addReturnDetail($orderDetailList, $productQtyList, $customizationIds, $customizationQtyInput)</method>
+				<method type="public">checkEnoughProduct($orderDetailList, $productQtyList, $customizationIds, $customizationQtyInput)</method>
+				<method type="public">countProduct()</method>
+				<method type="static">getOrdersReturn($customer_id, $order_id = false, $no_denied = false, Context $context = null)</method>
+				<method type="static">getOrdersReturnDetail($id_order_return)</method>
+				<method type="static">getOrdersReturnProducts($orderReturnId, $order)</method>
+				<method type="static">getReturnedCustomizedProducts($id_order)</method>
+				<method type="static">deleteOrderReturnDetail($id_order_return, $id_order_detail, $id_customization = 0)</method>
+				<method type="static">getProductReturnDetail($id_order_detail)</method>
+				<method type="static">addReturnedQuantity($products, $id_order)</method>
+			</methods>
+		</class>
+		<class name="OrderReturnState">
+			<methods>
+				<method type="static">getOrderReturnStates($id_lang)</method>
+			</methods>
+		</class>
+		<class name="OrderSlip">
+			<methods>
+				<method type="public">addSlipDetail($orderDetailList, $productQtyList)</method>
+				<method type="static">getOrdersSlip($customer_id, $order_id = false)</method>
+				<method type="static">getOrdersSlipDetail($id_order_slip = false, $id_order_detail = false)</method>
+				<method type="static">getOrdersSlipProducts($orderSlipId, $order)</method>
+				<method type="static">getProductSlipResume($id_order_detail)</method>
+				<method type="static">getProductSlipDetail($id_order_detail)</method>
+				<method type="public">getProducts()</method>
+				<method type="static">getSlipsIdByDate($dateFrom, $dateTo)</method>
+				<method type="static">createOrderSlip($order, $productList, $qtyList, $shipping_cost = false)</method>
+				<method type="static">createPartialOrderSlip($order, $amount, $shipping_cost_amount, $order_detail_list)</method>
+				<method type="public">addPartialSlipDetail($order_detail_list)</method>
+			</methods>
+		</class>
+		<class name="OrderState">
+			<methods>
+				<method type="static">getOrderStates($id_lang)</method>
+				<method type="static">invoiceAvailable($id_order_state)</method>
+				<method type="public">isRemovable()</method>
+			</methods>
+		</class>
+		<class name="Pack">
+			<methods>
+				<method type="static">isPack($id_product)</method>
+				<method type="static">isPacked($id_product)</method>
+				<method type="static">noPackPrice($id_product)</method>
+				<method type="static">getItems($id_product, $id_lang)</method>
+				<method type="static">isInStock($id_product)</method>
+				<method type="static">getItemTable($id_product, $id_lang, $full = false)</method>
+				<method type="static">getPacksTable($id_product, $id_lang, $full = false, $limit = null)</method>
+				<method type="static">deleteItems($id_product)</method>
+				<method type="static">addItem($id_product, $id_item, $qty)</method>
+				<method type="static">duplicate($id_product_old, $id_product_new)</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="static">isCurrentlyUsed($table = null, $has_active_column = false)</method>
+				<method type="static">usesAdvancedStockManagement($id_product)</method>
+			</methods>
+		</class>
+		<class name="Page">
+			<methods>
+				<method type="static">getCurrentId()</method>
+				<method type="static">getPageTypeByName($name)</method>
+				<method type="static">setPageViewed($id_page)</method>
+				<method type="public">getFields()</method>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="static">getByOrderId($id_order)</method>
+			</methods>
+		</class>
+		<class name="PaymentModule">
+			<methods>
+				<method type="public">install()</method>
+				<method type="public">uninstall()</method>
+				<method type="public">addCheckboxCurrencyRestrictionsForModule(array $shops = array</method>
+				<method type="public">addRadioCurrencyRestrictionsForModule(array $shops = array</method>
+				<method type="public">addCheckboxCountryRestrictionsForModule(array $shops = array</method>
+				<method type="public">validateOrder($id_cart, $id_order_state, $amount_paid, $payment_method = 'Unknown',</method>
+				<method type="public">formatProductAndVoucherForEmail($content)</method>
+				<method type="public">_getTxtFormatedAddress($the_address)</method>
+				<method type="public">_getFormatedAddress(Address $the_address, $line_sep, $fields_style = array</method>
+				<method type="public">getCurrency($current_id_currency = null)</method>
+				<method type="static">addCurrencyPermissions($id_currency, array $id_module_list = array</method>
+				<method type="static">getInstalledPaymentModules()</method>
+				<method type="static">preCall($module_name)</method>
+			</methods>
+		</class>
+		<class name="HTMLTemplate">
+			<methods>
+				<method type="public">getHeader()</method>
+				<method type="public">getFooter()</method>
+				<method type="public">getShopAddress()</method>
+				<method type="public">getLogo()</method>
+				<method type="public">assignHookData($object)</method>
+				<method type="abstract">getContent()</method>
+				<method type="abstract">getFilename()</method>
+				<method type="abstract">getBulkFilename()</method>
+				<method type="public">getTemplate($template_name)</method>
+				<method type="static">l($string)</method>
+				<method type="public">__construct(OrderInvoice $order_invoice, $smarty)</method>
+				<method type="public">getContent()</method>
+				<method type="public">getBulkFilename()</method>
+				<method type="public">getFilename()</method>
+				<method type="public">__construct(OrderInvoice $order_invoice, $smarty)</method>
+				<method type="public">getContent()</method>
+				<method type="public">getTaxTabContent()</method>
+				<method type="public">getTemplateByCountry($iso_country)</method>
+				<method type="public">getBulkFilename()</method>
+				<method type="public">getFilename()</method>
+				<method type="public">__construct(OrderReturn $order_return, $smarty)</method>
+				<method type="public">getContent()</method>
+				<method type="public">getFilename()</method>
+				<method type="public">getBulkFilename()</method>
+				<method type="public">__construct(OrderSlip $order_slip, $smarty)</method>
+				<method type="public">getContent()</method>
+				<method type="public">getBulkFilename()</method>
+				<method type="public">getFilename()</method>
+				<method type="public">getTaxTabContent()</method>
+				<method type="public">getProductTaxesBreakdown()</method>
+				<method type="public">getShippingTaxesBreakdown()</method>
+				<method type="public">__construct(SupplyOrder $supply_order, $smarty)</method>
+				<method type="public">getContent()</method>
+				<method type="public">getBulkFilename()</method>
+				<method type="public">getFilename()</method>
+				<method type="public">getTaxOrderSummary()</method>
+				<method type="public">getHeader()</method>
+				<method type="public">getFooter()</method>
+				<method type="public">roundSupplyOrderDetails($collection)</method>
+				<method type="public">roundSupplyOrder(SupplyOrder $supply_order)</method>
+				<method type="public">__construct($objects, $template, $smarty)</method>
+				<method type="public">render($display = true)</method>
+				<method type="public">getTemplateObject($object)</method>
+				<method type="public">__construct($use_cache = false)</method>
+				<method type="public">setEncoding($encoding)</method>
+				<method type="public">createHeader($header)</method>
+				<method type="public">createFooter($footer)</method>
+				<method type="public">createContent($content)</method>
+				<method type="public">setFontForLang($iso_lang)</method>
+				<method type="public">Header()</method>
+				<method type="public">Footer()</method>
+				<method type="public">render($filename, $display = true)</method>
+				<method type="public">writePage()</method>
+			</methods>
+		</class>
+		<class name="Product">
+			<methods>
+				<method type="public">__construct($id_product = null, $full = false, $id_lang = null, $id_shop = null, Context $context = null)</method>
+				<method type="public">getFieldsShop()</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="static">initPricesComputation($id_customer = null)</method>
+				<method type="static">getTaxCalculationMethod($id_customer = null)</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">cleanPositions($id_category)</method>
+				<method type="static">getDefaultAttribute($id_product, $minimum_quantity = 0)</method>
+				<method type="static">updateDefaultAttribute($id_product)</method>
+				<method type="static">updateIsVirtual($id_product)</method>
+				<method type="public">validateFieldsLang($die = true, $error_return = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteSelection($products)</method>
+				<method type="public">deleteFromCartRules()</method>
+				<method type="public">deleteFromSupplier()</method>
+				<method type="public">addToCategories($categories = array</method>
+				<method type="public">updateCategories($categories, $keeping_current_pos = false)</method>
+				<method type="public">deleteCategory($id_category, $clean_positions = true)</method>
+				<method type="public">deleteCategories($clean_positions = false)</method>
+				<method type="public">deleteTags()</method>
+				<method type="public">deleteCartProducts()</method>
+				<method type="public">deleteImages()</method>
+				<method type="static">getProductAttributePrice($id_product_attribute)</method>
+				<method type="static">getProducts($id_lang, $start, $limit, $order_by, $order_way, $id_category = false,</method>
+				<method type="static">getSimpleProducts($id_lang, Context $context = null)</method>
+				<method type="public">isNew()</method>
+				<method type="public">productAttributeExists($attributes_list, $current_product_attribute = false, Context $context = null, $all_shops = false, $return_id = false)</method>
+				<method type="public">addProductAttribute($price, $weight, $unit_impact, $ecotax, $quantity, $id_images, $reference,</method>
+				<method type="public">generateMultipleCombinations($combinations, $attributes)</method>
+				<method type="public">addCombinationEntity($wholesale_price, $price, $weight, $unit_impact, $ecotax, $quantity,</method>
+				<method type="public">addProductAttributeMultiple($attributes, $set_default = true)</method>
+				<method type="public">deleteDefaultAttributes()</method>
+				<method type="public">setDefaultAttribute($id_product_attribute)</method>
+				<method type="public">updateProductAttribute($id_product_attribute, $wholesale_price, $price, $weight, $unit, $ecotax,</method>
+				<method type="public">addSupplierReference($id_supplier, $id_product_attribute, $supplier_reference = null, $price = null, $id_currency = null)</method>
+				<method type="public">updateAttribute($id_product_attribute, $wholesale_price, $price, $weight, $unit, $ecotax,</method>
+				<method type="public">addAttribute($price, $weight, $unit_impact, $ecotax, $id_images, $reference, $ean13,</method>
+				<method type="public">updateQuantityProductWithAttributeQuantity()</method>
+				<method type="public">deleteProductAttributes()</method>
+				<method type="public">deleteAttributesImpacts()</method>
+				<method type="public">deleteProductFeatures()</method>
+				<method type="public">deleteAttachments()</method>
+				<method type="public">deleteCustomization()</method>
+				<method type="public">deletePack()</method>
+				<method type="public">deleteProductSale()</method>
+				<method type="public">deleteSceneProducts()</method>
+				<method type="public">deleteSearchIndexes()</method>
+				<method type="public">addAttributeCombinaison($id_product_attribute, $attributes)</method>
+				<method type="public">addAttributeCombinationMultiple($id_attributes, $combinations)</method>
+				<method type="public">deleteAttributeCombination($id_product_attribute)</method>
+				<method type="public">deleteFeatures()</method>
+				<method type="public">getAttributesResume($id_lang, $attribute_value_separator = ' - ', $attribute_separator = ', ')</method>
+				<method type="public">getAttributeCombinations($id_lang)</method>
+				<method type="public">getAttributeCombinationsById($id_product_attribute, $id_lang)</method>
+				<method type="public">getCombinationImages($id_lang)</method>
+				<method type="public">hasAttributes()</method>
+				<method type="static">getNewProducts($id_lang, $page_number = 0, $nb_products = 10,</method>
+				<method type="static">_getProductIdByDate($beginning, $ending, Context $context = null, $with_combination = false)</method>
+				<method type="static">getRandomSpecial($id_lang, $beginning = false, $ending = false, Context $context = null)</method>
+				<method type="static">getPricesDrop($id_lang, $page_number = 0, $nb_products = 10, $count = false,</method>
+				<method type="static">getProductCategories($id_product = '')</method>
+				<method type="static">getProductCategoriesFull($id_product = '', $id_lang = null)</method>
+				<method type="public">getCategories()</method>
+				<method type="public">getCarriers()</method>
+				<method type="public">setCarriers($carrier_list)</method>
+				<method type="public">getImages($id_lang, Context $context = null)</method>
+				<method type="static">getCover($id_product, Context $context = null)</method>
+				<method type="static">getPriceStatic($id_product, $usetax = true, $id_product_attribute = null, $decimals = 6, $divisor = null,</method>
+				<method type="static">priceCalculation($id_shop, $id_product, $id_product_attribute, $id_country, $id_state, $zipcode, $id_currency,</method>
+				<method type="static">convertAndFormatPrice($price, $currency = false, Context $context = null)</method>
+				<method type="static">isDiscounted($id_product, $quantity = 1, Context $context = null)</method>
+				<method type="public">getPrice($tax = true, $id_product_attribute = null, $decimals = 6,</method>
+				<method type="public">getPublicPrice($tax = true, $id_product_attribute = null, $decimals = 6,</method>
+				<method type="public">getIdProductAttributeMostExpensive()</method>
+				<method type="public">getDefaultIdProductAttribute()</method>
+				<method type="public">getPriceWithoutReduct($notax = false, $id_product_attribute = false)</method>
+				<method type="static">convertPrice($params, $smarty)</method>
+				<method type="static">convertPriceWithCurrency($params, $smarty)</method>
+				<method type="static">displayWtPrice($params, $smarty)</method>
+				<method type="static">displayWtPriceWithCurrency($params, $smarty)</method>
+				<method type="static">getQuantity($id_product, $id_product_attribute = null, $cache_is_pack = null)</method>
+				<method type="static">sqlStock($product_alias, $product_attribute = 0, $inner_join = false, Shop $shop = null)</method>
+				<method type="static">updateQuantity()</method>
+				<method type="static">reinjectQuantities()</method>
+				<method type="static">isAvailableWhenOutOfStock($out_of_stock)</method>
+				<method type="public">checkQty($qty)</method>
+				<method type="public">checkDefaultAttributes()</method>
+				<method type="public">getAttributesGroups($id_lang)</method>
+				<method type="public">deleteAccessories()</method>
+				<method type="public">deleteFromAccessories()</method>
+				<method type="static">getAccessoriesLight($id_lang, $id_product, Context $context = null)</method>
+				<method type="public">getAccessories($id_lang, $active = true, Context $context = null)</method>
+				<method type="static">getAccessoryById($accessory_id)</method>
+				<method type="public">changeAccessories($accessories_id)</method>
+				<method type="public">addFeaturesCustomToDB($id_value, $lang, $cust)</method>
+				<method type="public">addFeaturesToDB($id_feature, $id_value, $cust = 0)</method>
+				<method type="static">addFeatureProductImport($id_product, $id_feature, $id_feature_value)</method>
+				<method type="public">getFeatures()</method>
+				<method type="static">getFeaturesStatic($id_product)</method>
+				<method type="static">cacheProductsFeatures($product_ids)</method>
+				<method type="static">cacheFrontFeatures($product_ids, $id_lang)</method>
+				<method type="static">searchByName($id_lang, $query, Context $context = null)</method>
+				<method type="static">duplicateAttributes($id_product_old, $id_product_new)</method>
+				<method type="static">_getAttributeImageAssociations($id_product_attribute)</method>
+				<method type="static">duplicateAccessories($id_product_old, $id_product_new)</method>
+				<method type="static">duplicateTags($id_product_old, $id_product_new)</method>
+				<method type="static">duplicateDownload($id_product_old, $id_product_new)</method>
+				<method type="static">duplicateAttachments($id_product_old, $id_product_new)</method>
+				<method type="static">duplicateFeatures($id_product_old, $id_product_new)</method>
+				<method type="static">_getCustomizationFieldsNLabels($product_id)</method>
+				<method type="static">duplicateSpecificPrices($old_product_id, $product_id)</method>
+				<method type="static">duplicateCustomizationFields($old_product_id, $product_id)</method>
+				<method type="public">getLink(Context $context = null)</method>
+				<method type="public">getTags($id_lang)</method>
+				<method type="static">defineProductImage($row, $id_lang)</method>
+				<method type="static">getProductProperties($id_lang, $row, Context $context = null)</method>
+				<method type="static">getProductsProperties($id_lang, $query_result)</method>
+				<method type="static">getFrontFeaturesStatic($id_lang, $id_product)</method>
+				<method type="public">getFrontFeatures($id_lang)</method>
+				<method type="static">getAttachmentsStatic($id_lang, $id_product)</method>
+				<method type="public">getAttachments($id_lang)</method>
+				<method type="static">getAllCustomizedDatas($id_cart, $id_lang = null, $only_in_cart = true)</method>
+				<method type="static">addCustomizationPrice($products, $customized_datas)</method>
+				<method type="public">_checkLabelField($field, $value)</method>
+				<method type="public">_deleteOldLabels()</method>
+				<method type="public">_createLabel($languages, $type)</method>
+				<method type="public">createLabels($uploadable_files, $text_fields)</method>
+				<method type="public">updateLabels()</method>
+				<method type="public">getCustomizationFields($id_lang = false)</method>
+				<method type="public">getCustomizationFieldIds()</method>
+				<method type="public">getRequiredCustomizableFields()</method>
+				<method type="public">hasAllRequiredCustomizableFields(Context $context = null)</method>
+				<method type="static">idIsOnCategoryId($id_product, $categories)</method>
+				<method type="public">getNoPackPrice()</method>
+				<method type="public">checkAccess($id_customer)</method>
+				<method type="public">addStockMvt($quantity, $id_reason, $id_product_attribute = null, $id_order = null, $id_employee = null)</method>
+				<method type="public">getStockMvts($id_lang)</method>
+				<method type="static">getUrlRewriteInformations($id_product)</method>
+				<method type="public">getIdTaxRulesGroup()</method>
+				<method type="static">getIdTaxRulesGroupByIdProduct($id_product, Context $context = null)</method>
+				<method type="public">getTaxesRate(Address $address = null)</method>
+				<method type="public">getWsProductFeatures()</method>
+				<method type="public">setWsProductFeatures($product_features)</method>
+				<method type="public">getWsDefaultCombination()</method>
+				<method type="public">setWsDefaultCombination($id_combination)</method>
+				<method type="public">getWsCategories()</method>
+				<method type="public">setWsCategories($category_ids)</method>
+				<method type="public">getWsCombinations()</method>
+				<method type="public">setWsCombinations($combinations)</method>
+				<method type="public">getWsProductOptionValues()</method>
+				<method type="public">getWsPositionInCategory()</method>
+				<method type="public">getCoverWs()</method>
+				<method type="public">setCoverWs($id_image)</method>
+				<method type="public">getWsImages()</method>
+				<method type="public">getWsTags()</method>
+				<method type="public">getWsManufacturerName()</method>
+				<method type="static">resetEcoTax()</method>
+				<method type="public">setGroupReduction()</method>
+				<method type="public">existsRefInDatabase($reference)</method>
+				<method type="static">getProductAttributesIds($id_product, $shop_only = false)</method>
+				<method type="static">getAttributesParams($id_product, $id_product_attribute)</method>
+				<method type="static">getAttributesInformationsByProduct($id_product)</method>
+				<method type="public">getAnchor($id_product_attribute)</method>
+				<method type="static">getProductName($id_product, $id_product_attribute = null, $id_lang = null)</method>
+				<method type="public">addWs($autodate = true, $null_values = false)</method>
+				<method type="public">updateWs($null_values = false)</method>
+				<method type="static">getRealQuantity($id_product, $id_product_attribute = 0, $id_warehouse = 0, $id_shop = null)</method>
+				<method type="static">usesAdvancedStockManagement($id_product)</method>
+				<method type="static">flushPriceCache()</method>
+				<method type="public">getParentCategories($id_lang = null)</method>
+				<method type="public">loadStockData()</method>
+				<method type="public">getDefaultCategory()</method>
+				<method type="static">getShopsByProduct($id_product)</method>
+				<method type="public">deleteDownload()</method>
+				<method type="public">getAttributeCombinaisons($id_lang)</method>
+				<method type="public">deleteAttributeCombinaison($id_product_attribute)</method>
+				<method type="public">getType()</method>
+				<method type="public">hasAttributesInOtherShops()</method>
+			</methods>
+		</class>
+		<class name="ProductDownload">
+			<methods>
+				<method type="public">__construct($id_product_download = null)</method>
+				<method type="public">getFields()</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">delete($delete = false)</method>
+				<method type="public">deleteFile($id_product_download = null)</method>
+				<method type="public">checkFile()</method>
+				<method type="static">checkWritableDir()</method>
+				<method type="static">getIdFromIdProduct($id_product)</method>
+				<method type="static">getIdFromFilename($filename)</method>
+				<method type="static">getFilenameFromIdProduct($id_product)</method>
+				<method type="static">getFilenameFromFilename($filename)</method>
+				<method type="public">getTextLink($admin = true, $hash = false)</method>
+				<method type="public">getHtmlLink($class = false, $admin = true, $hash = false)</method>
+				<method type="public">getDeadline()</method>
+				<method type="public">getHash()</method>
+				<method type="static">getNewFilename()</method>
+				<method type="static">isFeatureActive()</method>
+			</methods>
+		</class>
+		<class name="ProductSale">
+			<methods>
+				<method type="static">fillProductSales()</method>
+				<method type="static">getNbSales()</method>
+				<method type="static">getBestSales($id_lang, $page_number = 0, $nb_products = 10, $order_by = null, $order_way = null)</method>
+				<method type="static">getBestSalesLight($id_lang, $page_number = 0, $nb_products = 10, Context $context = null)</method>
+				<method type="static">addProductSale($product_id, $qty = 1)</method>
+				<method type="static">getNbrSales($id_product)</method>
+				<method type="static">removeProductSale($id_product, $qty = 1)</method>
+				<method type="public">delete()</method>
+				<method type="static">getProductSupplierReference($id_product, $id_product_attribute, $id_supplier)</method>
+				<method type="static">getProductSupplierPrice($id_product, $id_product_attribute, $id_supplier, $with_currency = false)</method>
+				<method type="static">getIdByProductAndSupplier($id_product, $id_product_attribute, $id_supplier)</method>
+				<method type="static">getSupplierCollection($id_product, $group_by_supplier = true)</method>
+				<method type="static">getProductPrice($id_supplier, $id_product, $id_product_attribute = 0)</method>
+			</methods>
+		</class>
+		<class name="Profile">
+			<methods>
+				<method type="static">getProfiles($id_lang)</method>
+				<method type="static">getProfile($id_profile, $id_lang = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">getProfileAccess($id_profile, $id_tab)</method>
+				<method type="static">getProfileAccesses($id_profile, $type = 'id_tab')</method>
+			</methods>
+		</class>
+		<class name="QuickAccess">
+			<methods>
+				<method type="static">getQuickAccesses($id_lang)</method>
+			</methods>
+		</class>
+		<class name="RangePrice">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="static">getRanges($id_carrier)</method>
+				<method type="static">rangeExist($id_carrier, $delimiter1, $delimiter2)</method>
+				<method type="static">isOverlapping($id_carrier, $delimiter1, $delimiter2, $id_rang = null)</method>
+			</methods>
+		</class>
+		<class name="RangeWeight">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="static">getRanges($id_carrier)</method>
+				<method type="static">rangeExist($id_carrier, $delimiter1, $delimiter2)</method>
+				<method type="static">isOverlapping($id_carrier, $delimiter1, $delimiter2, $id_rang = null)</method>
+			</methods>
+		</class>
+		<class name="Referrer">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="static">cacheNewSource($id_connections_source)</method>
+				<method type="static">getReferrers($id_customer)</method>
+				<method type="public">getStatsVisits($id_product, $employee)</method>
+				<method type="public">getRegistrations($id_product, $employee)</method>
+				<method type="public">getStatsSales($id_product, $employe)</method>
+				<method type="static">refreshCache($referrers = null, $employee = null)</method>
+				<method type="static">refreshIndex($referrers = null)</method>
+				<method type="static">getAjaxProduct($id_referrer, $id_product, $employee = null)</method>
+			</methods>
+		</class>
+		<class name="RequestSql">
+			<methods>
+				<method type="static">getRequestSql()</method>
+				<method type="static">getRequestSqlById($id)</method>
+				<method type="public">parsingSql($sql)</method>
+				<method type="public">validateParser($tab, $in = false, $sql)</method>
+				<method type="public">validateSql($tab, $in, $sql)</method>
+				<method type="public">getTables()</method>
+				<method type="public">getAttributesByTable($table)</method>
+				<method type="public">cutJoin($attrs, $from)</method>
+				<method type="public">cutAttribute($attr, $from)</method>
+				<method type="public">returnNameTable($alias = false, $tables)</method>
+				<method type="public">attributExistInTable($attr, $table)</method>
+				<method type="public">testedRequired($tab)</method>
+				<method type="public">testedUnauthorized($tab)</method>
+				<method type="public">checkedFrom($from)</method>
+				<method type="public">checkedSelect($select, $from, $in = false)</method>
+				<method type="public">checkedWhere($where, $from, $sql)</method>
+				<method type="public">checkedHaving($having, $from)</method>
+				<method type="public">checkedOrder($order, $from)</method>
+				<method type="public">checkedGroupBy($group, $from)</method>
+				<method type="public">checkedLimit($limit)</method>
+			</methods>
+		</class>
+		<class name="Rijndael">
+			<methods>
+				<method type="public">__construct($key, $iv)</method>
+				<method type="public">encrypt($plaintext)</method>
+				<method type="public">decrypt($ciphertext)</method>
+				<method type="public">getFields()</method>
+				<method type="public">getTranslationsFieldsChild()</method>
+				<method type="static">getRisks($id_lang = null)</method>
+			</methods>
+		</class>
+		<class name="Scene">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null, $lite_result = true, $hide_scene_position = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteImage($force_delete = false)</method>
+				<method type="public">addCategories($categories)</method>
+				<method type="public">deleteCategories()</method>
+				<method type="public">updateCategories()</method>
+				<method type="public">addZoneProducts($zones)</method>
+				<method type="public">deleteZoneProducts()</method>
+				<method type="public">updateZoneProducts()</method>
+				<method type="static">getScenes($id_category, $id_lang = null, $only_active = true, $lite_result = true, $hide_scene_position = true, Context $context = null)</method>
+				<method type="public">getProducts($only_active = true, $id_lang = null, $lite_result = true, Context $context = null)</method>
+				<method type="static">getIndexedCategories($id_scene)</method>
+				<method type="static">hideScenePosition($name)</method>
+				<method type="static">isFeatureActive()</method>
+			</methods>
+		</class>
+		<class name="Search">
+			<methods>
+				<method type="static">sanitize($string, $id_lang, $indexation = false)</method>
+				<method type="static">find($id_lang, $expr, $page_number = 1, $page_size = 1, $order_by = 'position',</method>
+				<method type="static">getTags($db, $id_product, $id_lang)</method>
+				<method type="static">getAttributes($db, $id_product, $id_lang)</method>
+				<method type="static">getFeatures($db, $id_product, $id_lang)</method>
+				<method type="static">getProductsToIndex($total_languages, $id_product = false, $limit = 50)</method>
+				<method type="static">indexation($full = false, $id_product = false)</method>
+				<method type="static">setProductsAsIndexed($products)</method>
+				<method type="static">saveIndex($queryArray3)</method>
+				<method type="static">searchTag($id_lang, $tag, $count = false, $pageNumber = 0, $pageSize = 10, $orderBy = false, $orderWay = false,</method>
+			</methods>
+		</class>
+		<class name="SearchEngine">
+			<methods>
+				<method type="static">getKeywords($url)</method>
+				<method type="public">__construct($id = null, $id_lang = null, $id_shop = null)</method>
+				<method type="static">init()</method>
+				<method type="public">setUrl()</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">hasDependency($id_shop)</method>
+				<method type="static">initialize()</method>
+				<method type="public">getAddress()</method>
+				<method type="public">getTheme()</method>
+				<method type="public">getBaseURI()</method>
+				<method type="public">getBaseURL()</method>
+				<method type="public">getGroup()</method>
+				<method type="public">getCategory()</method>
+				<method type="public">getUrls()</method>
+				<method type="public">isDefaultShop()</method>
+				<method type="static">getAssoTable($table)</method>
+				<method type="static">checkIdShopDefault($table)</method>
+				<method type="static">getAssoTables()</method>
+				<method type="static">isTableAssociated($table)</method>
+				<method type="static">cacheShops($refresh = false)</method>
+				<method type="static">getCompleteListOfShopsID()</method>
+				<method type="static">getShops($active = true, $id_shop_group = null, $get_as_list_id = false)</method>
+				<method type="public">getUrlsSharedCart()</method>
+				<method type="static">getShopsCollection($active = true, $id_shop_group = null)</method>
+				<method type="static">getShop($shop_id)</method>
+				<method type="static">getIdByName($name)</method>
+				<method type="static">getTotalShops($active = true, $id_shop_group = null)</method>
+				<method type="static">getGroupFromShop($shop_id, $as_id = true)</method>
+				<method type="static">getSharedShops($shop_id, $type)</method>
+				<method type="static">getContextListShopID($share = false)</method>
+				<method type="static">getShopById($id, $identifier, $table)</method>
+				<method type="static">setContext($type, $id = null)</method>
+				<method type="static">getContext()</method>
+				<method type="static">getContextShopID()</method>
+				<method type="static">getContextShopGroupID()</method>
+				<method type="static">getContextShopGroup()</method>
+				<method type="static">addSqlRestriction($share = false, $alias = null)</method>
+				<method type="static">addSqlAssociation($table, $alias, $inner_join = true, $on = null)</method>
+				<method type="static">addSqlRestrictionOnLang($alias = null, $id_shop = null)</method>
+				<method type="static">getTree()</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="public">copyShopData($old_id, $tables_import = false, $deleted = false)</method>
+				<method type="static">getCategories($id = 0, $only_id = true)</method>
+				<method type="static">getCurrentShop()</method>
+				<method type="static">getEntityIds($entity, $id_shop, $active = false, $delete = false)</method>
+				<method type="public">getFields()</method>
+				<method type="static">getShopGroups($active = true)</method>
+				<method type="static">getTotalShopGroup($active = true)</method>
+				<method type="public">haveShops()</method>
+				<method type="public">getTotalShops()</method>
+				<method type="static">getShopsFromGroup($id_group)</method>
+				<method type="static">getIdByName($name)</method>
+				<method type="static">hasDependency($id_shop_group, $check = 'all')</method>
+			</methods>
+		</class>
+		<class name="ShopUrl">
+			<methods>
+				<method type="public">getFields()</method>
+				<method type="public">getBaseURI()</method>
+				<method type="public">getURL($ssl = false)</method>
+				<method type="static">getShopUrls($id_shop = false)</method>
+				<method type="public">setMain()</method>
+				<method type="public">canAddThisUrl($domain, $domain_ssl, $physical_uri, $virtual_uri)</method>
+				<method type="static">getMainShopDomain()</method>
+				<method type="static">getMainShopDomainSSL()</method>
+			</methods>
+		</class>
+		<class name="SpecificPrice">
+			<methods>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">delete()</method>
+				<method type="static">getByProductId($id_product, $id_product_attribute = false, $id_cart = false)</method>
+				<method type="static">deleteByIdCart($id_cart, $id_product = false, $id_product_attribute = false)</method>
+				<method type="static">getIdsByProductId($id_product, $id_product_attribute = false, $id_cart = 0)</method>
+				<method type="static">_getScoreQuery($id_product, $id_shop, $id_currency, $id_country, $id_group, $id_customer)</method>
+				<method type="static">getPriority($id_product)</method>
+				<method type="static">getSpecificPrice($id_product, $id_shop, $id_currency, $id_country, $id_group, $quantity, $id_product_attribute = null, $id_customer = 0, $id_cart = 0, $real_quantity = 0)</method>
+				<method type="static">setPriorities($priorities)</method>
+				<method type="static">deletePriorities()</method>
+				<method type="static">setSpecificPriority($id_product, $priorities)</method>
+				<method type="static">getQuantityDiscounts($id_product, $id_shop, $id_currency, $id_country, $id_group, $id_product_attribute = null, $all_combinations = false, $id_customer = 0)</method>
+				<method type="static">getQuantityDiscount($id_product, $id_shop, $id_currency, $id_country, $id_group, $quantity, $id_product_attribute = null, $id_customer = 0)</method>
+				<method type="static">getProductIdByDate($id_shop, $id_currency, $id_country, $id_group, $beginning, $ending, $id_customer = 0, $with_combination_id = false)</method>
+				<method type="static">deleteByProductId($id_product)</method>
+				<method type="public">duplicate($id_product = false)</method>
+				<method type="static">isFeatureActive()</method>
+				<method type="static">exists($id_product, $id_product_attribute, $id_shop, $id_group, $id_country, $id_currency, $id_customer, $from_quantity, $from, $to, $rule = false)</method>
+			</methods>
+		</class>
+		<class name="SpecificPriceRule">
+			<methods>
+				<method type="public">delete()</method>
+				<method type="public">deleteConditions()</method>
+				<method type="public">addConditions($conditions)</method>
+				<method type="public">apply($products = false)</method>
+				<method type="public">resetApplication($products = false)</method>
+				<method type="static">applyAllRules($products = false)</method>
+				<method type="public">getConditions()</method>
+				<method type="public">getAffectedProducts($products = false)</method>
+				<method type="static">applyRuleToProduct($id_rule, $id_product, $id_product_attribute = null)</method>
+			</methods>
+		</class>
+		<class name="State">
+			<methods>
+				<method type="static">getStates($id_lang = false, $active = false)</method>
+				<method type="static">getNameById($id_state)</method>
+				<method type="static">getIdByName($state)</method>
+				<method type="static">getIdByIso($iso_code, $id_country = null)</method>
+				<method type="public">delete()</method>
+				<method type="public">isUsed()</method>
+				<method type="public">countUsed()</method>
+				<method type="static">getStatesByIdCountry($id_country)</method>
+				<method type="static">hasCounties($id_state)</method>
+				<method type="static">getIdZone($id_state)</method>
+				<method type="public">affectZoneToSelection($ids_states, $id_zone)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">getProductInformations()</method>
+				<method type="public">getWsRealQuantity()</method>
+				<method type="static">getStockAvailableIdByProductId($id_product, $id_product_attribute = null, $id_shop = null)</method>
+				<method type="static">synchronize($id_product, $order_id_shop = null)</method>
+				<method type="static">setProductDependsOnStock($id_product, $depends_on_stock = true, $id_shop = null, $id_product_attribute = 0)</method>
+				<method type="static">setProductOutOfStock($id_product, $out_of_stock = false, $id_shop = null, $id_product_attribute = 0)</method>
+				<method type="static">getQuantityAvailableByProduct($id_product = null, $id_product_attribute = null, $id_shop = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">postSave()</method>
+				<method type="static">updateQuantity($id_product, $id_product_attribute, $delta_quantity, $id_shop = null)</method>
+				<method type="static">setQuantity($id_product, $id_product_attribute, $quantity, $id_shop = null)</method>
+				<method type="static">removeProductFromStockAvailable($id_product, $id_product_attribute = null, $shop = null)</method>
+				<method type="static">resetProductFromStockAvailableByShopGroup(ShopGroup $shop_group)</method>
+				<method type="static">dependsOnStock($id_product, $id_shop = null)</method>
+				<method type="static">outOfStock($id_product, $id_shop = null)</method>
+				<method type="static">addSqlShopRestriction(DbQuery $sql = null, $shop = null, $alias = null)</method>
+				<method type="static">addSqlShopParams($params, $id_shop = null)</method>
+				<method type="static">copyStockAvailableFromShopToShop($src_shop_id, $dst_shop_id)</method>
+				<method type="static">isAvailable()</method>
+				<method type="public">addProduct($id_product,</method>
+				<method type="public">removeProduct($id_product,</method>
+				<method type="public">getProductPhysicalQuantities($id_product, $id_product_attribute, $ids_warehouse = null, $usable = false)</method>
+				<method type="public">getProductRealQuantities($id_product, $id_product_attribute, $ids_warehouse = null, $usable = false)</method>
+				<method type="public">transferBetweenWarehouses($id_product,</method>
+				<method type="public">getProductCoverage($id_product, $id_product_attribute, $coverage, $id_warehouse = null)</method>
+				<method type="public">calculateWA(Stock $stock, $quantity, $price_te)</method>
+				<method type="public">getStockCollection($id_product, $id_product_attribute, $id_warehouse = null, $price_te = null)</method>
+				<method type="static">getManager()</method>
+				<method type="static">execHookStockManagerFactory()</method>
+				<method type="static">isAvailable()</method>
+				<method type="public">addProduct($id_product, $id_product_attribute, Warehouse $warehouse, $quantity, $id_stock_movement_reason, $price_te, $is_usable = true, $id_supply_order = null)</method>
+				<method type="public">removeProduct($id_product, $id_product_attribute, Warehouse $warehouse, $quantity, $id_stock_movement_reason, $is_usable = true, $id_order = null)</method>
+				<method type="public">getProductPhysicalQuantities($id_product, $id_product_attribute, $ids_warehouse = null, $usable = false)</method>
+				<method type="public">getProductRealQuantities($id_product, $id_product_attribute, $ids_warehouse = null, $usable = false)</method>
+				<method type="public">transferBetweenWarehouses($id_product, $id_product_attribute, $quantity, $warehouse_from, $warehouse_to, $usable_from = true, $usable_to = true)</method>
+				<method type="public">getProductCoverage($id_product, $id_product_attribute, $coverage, $id_warehouse = null)</method>
+			</methods>
+		</class>
+		<class name="StockManagerModule">
+			<methods>
+				<method type="public">install()</method>
+				<method type="public">hookStockManager()</method>
+				<method type="static">addMissingMvt($id_employee)</method>
+				<method type="static">getNegativeStockMvts($id_order, $id_product, $id_product_attribute, $quantity, $id_warehouse = null)</method>
+				<method type="static">getLastPositiveStockMvt($id_product, $id_product_attribute)</method>
+			</methods>
+		</class>
+		<class name="StockMvtReason">
+			<methods>
+				<method type="static">getStockMvtReasons($id_lang, $sign = null)</method>
+				<method type="static">getStockMvtReasonsWithFilter($id_lang, $ids_ignore, $sign = null)</method>
+				<method type="static">exists($id_stock_mvt_reason)</method>
+				<method type="public">__construct($id = null, $id_lang = null, $id_shop = null)</method>
+				<method type="public">getWebserviceObjectList($join, $filter, $sort, $limit, $full = false)</method>
+				<method type="public">getWSProductName()</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">calculatePrices()</method>
+				<method type="public">getEntries($id_lang = null)</method>
+				<method type="public">getEntriesCollection()</method>
+				<method type="public">hasEntries()</method>
+				<method type="public">isEditable()</method>
+				<method type="public">isDeliveryNoteAvailable()</method>
+				<method type="public">isInReceiptState()</method>
+				<method type="public">addHistory()</method>
+				<method type="public">resetProducts()</method>
+				<method type="static">warehouseHasPendingOrders($id_warehouse)</method>
+				<method type="static">supplierHasPendingOrders($id_supplier)</method>
+				<method type="static">exists($match)</method>
+				<method type="static">getSupplyOrderByReference($reference)</method>
+				<method type="public">hydrate(array $data, $id_lang = null)</method>
+				<method type="static">getReferenceById($id_supply_order)</method>
+				<method type="public">getWsSupplyOrderDetails()</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="public">calculatePrices()</method>
+				<method type="public">applyGlobalDiscount($discount_rate)</method>
+				<method type="public">validateController($htmlentities = true)</method>
+				<method type="public">hydrate(array $data, $id_lang = null)</method>
+				<method type="static">getSupplyOrderStates($id_state_referrer = null, $id_lang = null)</method>
+				<method type="static">getStates($ids = null, $id_lang = null)</method>
+				<method type="public">getShops()</method>
+				<method type="public">getCarriers()</method>
+				<method type="public">setCarriers($ids_carriers)</method>
+				<method type="static">removeCarrier($id_carrier, $id_warehouse = null)</method>
+				<method type="public">isEmpty()</method>
+				<method type="static">exists($id_warehouse)</method>
+				<method type="static">setProductLocation($id_product, $id_product_attribute, $id_warehouse, $location)</method>
+				<method type="public">resetProductsLocations()</method>
+				<method type="static">getProductLocation($id_product, $id_product_attribute, $id_warehouse)</method>
+				<method type="static">getProductWarehouseList($id_product, $id_product_attribute = 0, $id_shop = null)</method>
+				<method type="static">getWarehouses($ignore_shop = false, $id_shop = null)</method>
+				<method type="static">getWarehousesGroupedByShops()</method>
+				<method type="public">getNumberOfProducts()</method>
+				<method type="public">getQuantitiesOfProducts()</method>
+				<method type="public">getStockValue()</method>
+				<method type="static">getWarehousesByEmployee($id_employee)</method>
+				<method type="static">getWarehousesByProductId($id_product, $id_product_attribute = 0)</method>
+				<method type="static">getWarehouseNameById($id_warehouse)</method>
+				<method type="static">getPackWarehouses($id_product, $id_shop = null)</method>
+				<method type="public">resetStockAvailable()</method>
+				<method type="public">getWsStockValue()</method>
+				<method type="public">getWsStocks()</method>
+				<method type="public">getWsShops()</method>
+				<method type="public">getWsCarriers()</method>
+				<method type="static">getProductLocation($id_product, $id_product_attribute, $id_warehouse)</method>
+				<method type="static">getIdByProductAndWarehouse($id_product, $id_product_attribute, $id_warehouse)</method>
+				<method type="static">getCollection($id_product)</method>
+				<method type="static">getProducts($id_warehouse)</method>
+			</methods>
+		</class>
+		<class name="Store">
+			<methods>
+				<method type="public">__construct($id_store = null, $id_lang = null)</method>
+				<method type="public">getWsHours()</method>
+				<method type="public">setWsHours($hours)</method>
+			</methods>
+		</class>
+		<class name="Supplier">
+			<methods>
+				<method type="public">__construct($id = null, $id_lang = null)</method>
+				<method type="public">getLink()</method>
+				<method type="static">getSuppliers($get_nb_products = false, $id_lang = 0, $active = true, $p = false, $n = false, $all_groups = false)</method>
+				<method type="static">getNameById($id_supplier)</method>
+				<method type="static">getIdByName($name)</method>
+				<method type="static">getProducts($id_supplier, $id_lang, $p, $n,</method>
+				<method type="public">getProductsLite($id_lang)</method>
+				<method type="static">supplierExists($id_supplier)</method>
+				<method type="public">delete()</method>
+				<method type="static">getProductInformationsBySupplier($id_supplier, $id_product, $id_product_attribute = 0)</method>
+			</methods>
+		</class>
+		<class name="Tab">
+			<methods>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="static">initAccess($id_tab, Context $context = null)</method>
+				<method type="public">delete()</method>
+				<method type="static">getCurrentTabId()</method>
+				<method type="static">getCurrentParentId()</method>
+				<method type="static">getTab($id_lang, $id_tab)</method>
+				<method type="static">getModuleTabList()</method>
+				<method type="static">getTabs($id_lang, $id_parent = null)</method>
+				<method type="static">getIdFromClassName($class_name)</method>
+				<method type="static">getCollectionFromModule($module, $id_lang = null)</method>
+				<method type="static">enablingForModule($module)</method>
+				<method type="static">disablingForModule($module)</method>
+				<method type="static">getInstanceFromClassName($class_name)</method>
+				<method type="static">getNbTabs($id_parent = null)</method>
+				<method type="static">getNewLastPosition($id_parent)</method>
+				<method type="public">move($direction)</method>
+				<method type="public">cleanPositions($id_parent)</method>
+				<method type="public">updatePosition($way, $position)</method>
+				<method type="static">checkTabRights($id_tab)</method>
+				<method type="static">recursiveTab($id_tab, $tabs)</method>
+				<method type="public">update($null_values = false)</method>
+				<method type="static">getTabByIdProfile($id_parent, $id_profile)</method>
+				<method type="static">getClassNameById($id_tab)</method>
+			</methods>
+		</class>
+		<class name="Tag">
+			<methods>
+				<method type="public">__construct($id = null, $name = null, $id_lang = null)</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+				<method type="static">addTags($id_lang, $id_product, $tag_list, $separator = ',')</method>
+				<method type="static">getMainTags($id_lang, $nb = 10)</method>
+				<method type="static">getProductTags($id_product)</method>
+				<method type="public">getProducts($associated = true, Context $context = null)</method>
+				<method type="public">setProducts($array)</method>
+				<method type="static">deleteTagsForProduct($id_product)</method>
+			</methods>
+		</class>
+		<class name="Tax">
+			<methods>
+				<method type="public">delete()</method>
+				<method type="public">historize()</method>
+				<method type="public">toggleStatus()</method>
+				<method type="public">update($nullValues = false)</method>
+				<method type="public">_onStatusChange()</method>
+				<method type="public">isUsed()</method>
+				<method type="static">getTaxes($id_lang = false, $active_only = true)</method>
+				<method type="static">excludeTaxeOption()</method>
+				<method type="static">getTaxIdByName($tax_name, $active = 1)</method>
+				<method type="static">getProductEcotaxRate($id_address = null)</method>
+				<method type="static">getCarrierTaxRate($id_carrier, $id_address = null)</method>
+				<method type="static">getProductTaxRateViaRules($id_product, $id_country, $id_state, $zipcode)</method>
+				<method type="static">getProductTaxRate($id_product, $id_address = null)</method>
+				<method type="public">__construct(array $taxes = array</method>
+				<method type="public">addTaxes($price_te)</method>
+				<method type="public">removeTaxes($price_ti)</method>
+				<method type="public">getTotalRate()</method>
+				<method type="public">getTaxesAmount($price_te)</method>
+				<method type="static">getManager(Address $address, $type)</method>
+				<method type="static">execHookTaxManagerFactory(Address $address, $type)</method>
+				<method type="static">getCacheKey(Address $address)</method>
+				<method type="static">isAvailableForThisAddress(Address $address)</method>
+				<method type="public">getTaxCalculator()</method>
+			</methods>
+		</class>
+		<class name="TaxManagerModule">
+			<methods>
+				<method type="public">install()</method>
+				<method type="public">hookTaxManager($args)</method>
+			</methods>
+		</class>
+		<class name="TaxRule">
+			<methods>
+				<method type="static">deleteByGroupId($id_group)</method>
+				<method type="static">retrieveById($id_tax_rule)</method>
+				<method type="static">getTaxRulesByGroupId($id_lang, $id_group)</method>
+				<method type="static">deleteTaxRuleByIdTax($id_tax)</method>
+				<method type="static">deleteTaxRuleByIdCounty($id_county)</method>
+				<method type="static">isTaxInUse($id_tax)</method>
+				<method type="public">breakDownZipCode($zip_codes)</method>
+				<method type="static">swapTaxId($old_id, $new_id)</method>
+			</methods>
+		</class>
+		<class name="TaxRulesGroup">
+			<methods>
+				<method type="static">getTaxRulesGroups($only_active = true)</method>
+				<method type="static">getTaxRulesGroupsForOptions()</method>
+				<method type="static">getAssociatedTaxRatesByIdCountry($id_country)</method>
+				<method type="static">getIdByName($name)</method>
+				<method type="static">getTaxesRate($id_tax_rules_group, $id_country, $id_state, $zipcode)</method>
+				<method type="static">getTaxes($id_tax_rules_group, $id_country, $id_state, $id_county)</method>
+				<method type="public">__construct(Address $address, $type)</method>
+				<method type="static">isAvailableForThisAddress(Address $address)</method>
+				<method type="public">getTaxCalculator()</method>
+			</methods>
+		</class>
+		<class name="Theme">
+			<methods>
+				<method type="static">getThemes()</method>
+				<method type="static">getAvailable($installed_only = true)</method>
+				<method type="public">isUsed()</method>
+				<method type="public">add($autodate = true, $null_values = false)</method>
+			</methods>
+		</class>
+		<class name="Tools">
+			<methods>
+				<method type="static">passwdGen($length = 8, $flag = 'ALPHANUMERIC')</method>
+				<method type="static">strReplaceFirst($search, $replace, $subject, $cur = 0)</method>
+				<method type="static">redirect($url, $base_uri = __PS_BASE_URI__, Link $link = null, $headers = null)</method>
+				<method type="static">redirectLink($url)</method>
+				<method type="static">redirectAdmin($url)</method>
+				<method type="static">getShopProtocol()</method>
+				<method type="static">getProtocol($use_ssl = null)</method>
+				<method type="static">getHttpHost($http = false, $entities = false, $ignore_port = false)</method>
+				<method type="static">getShopDomain($http = false, $entities = false)</method>
+				<method type="static">getShopDomainSsl($http = false, $entities = false)</method>
+				<method type="static">getServerName()</method>
+				<method type="static">getRemoteAddr()</method>
+				<method type="static">usingSecureMode()</method>
+				<method type="static">getCurrentUrlProtocolPrefix()</method>
+				<method type="static">secureReferrer($referrer)</method>
+				<method type="static">getValue($key, $default_value = false)</method>
+				<method type="static">getIsset($key)</method>
+				<method type="static">setCookieLanguage($cookie = null)</method>
+				<method type="static">switchLanguage(Context $context = null)</method>
+				<method type="static">setCurrency($cookie)</method>
+				<method type="static">displayPrice($price, $currency = null, $no_utf8 = false, Context $context = null)</method>
+				<method type="static">displayPriceSmarty($params, $smarty)</method>
+				<method type="static">convertPrice($price, $currency = null, $to_currency = true, Context $context = null)</method>
+				<method type="static">convertPriceFull($amount, Currency $currency_from = null, Currency $currency_to = null)</method>
+				<method type="static">dateFormat($params, $smarty)</method>
+				<method type="static">displayDate($date, $id_lang, $full = false, $separator = '-')</method>
+				<method type="static">safeOutput($string, $html = false)</method>
+				<method type="static">htmlentitiesUTF8($string, $type = ENT_QUOTES)</method>
+				<method type="static">htmlentitiesDecodeUTF8($string)</method>
+				<method type="static">safePostVars()</method>
+				<method type="static">deleteDirectory($dirname, $delete_self = true)</method>
+				<method type="static">displayError($string = 'Fatal error', $htmlentities = true, Context $context = null)</method>
+				<method type="static">dieObject($object, $kill = true)</method>
+				<method type="static">fd($object)</method>
+				<method type="static">d($object, $kill = true)</method>
+				<method type="static">p($object)</method>
+				<method type="static">isSubmit($submit)</method>
+				<method type="static">getMetaTags($id_lang, $page_name, $title = '')</method>
+				<method type="static">getHomeMetaTags($id_lang, $page_name)</method>
+				<method type="static">completeMetaTags($meta_tags, $default_value, Context $context = null)</method>
+				<method type="static">encrypt($passwd)</method>
+				<method type="static">getToken($page = true, Context $context = null)</method>
+				<method type="static">getAdminToken($string)</method>
+				<method type="static">getAdminTokenLite($tab, Context $context = null)</method>
+				<method type="static">getAdminTokenLiteSmarty($params, $smarty)</method>
+				<method type="static">getPath($id_category, $path = '', $link_on_the_item = false, $category_type = 'products', Context $context = null)</method>
+				<method type="static">getFullPath($id_category, $end, $type_cat = 'products', Context $context = null)</method>
+				<method type="static">link_rewrite($str, $utf8_decode = false)</method>
+				<method type="static">str2url($str)</method>
+				<method type="static">replaceAccentedChars($str)</method>
+				<method type="static">truncate($str, $max_length, $suffix = '...')</method>
+				<method type="static">dateYears()</method>
+				<method type="static">dateDays()</method>
+				<method type="static">dateMonths()</method>
+				<method type="static">hourGenerate($hours, $minutes, $seconds)</method>
+				<method type="static">dateFrom($date)</method>
+				<method type="static">dateTo($date)</method>
+				<method type="static">strtolower($str)</method>
+				<method type="static">strlen($str, $encoding = 'UTF-8')</method>
+				<method type="static">stripslashes($string)</method>
+				<method type="static">strtoupper($str)</method>
+				<method type="static">substr($str, $start, $length = false, $encoding = 'utf-8')</method>
+				<method type="static">ucfirst($str)</method>
+				<method type="static">orderbyPrice($array, $order_way)</method>
+				<method type="static">iconv($from, $to, $string)</method>
+				<method type="static">isEmpty($field)</method>
+				<method type="static">ps_round($value, $precision = 0)</method>
+				<method type="static">ceilf($value, $precision = 0)</method>
+				<method type="static">floorf($value, $precision = 0)</method>
+				<method type="static">file_exists_cache($filename)</method>
+				<method type="static">file_get_contents($url, $use_include_path = false, $stream_context = null, $curl_timeout = 5)</method>
+				<method type="static">simplexml_load_file($url, $class_name = null)</method>
+				<method type="static">minifyHTML($html_content)</method>
+				<method type="static">toCamelCase($str, $catapitalise_first_char = false)</method>
+				<method type="static">toUnderscoreCase($string)</method>
+				<method type="static">getBrightness($hex)</method>
+				<method type="static">minifyHTMLpregCallback($preg_matches)</method>
+				<method type="static">packJSinHTML($html_content)</method>
+				<method type="static">packJSinHTMLpregCallback($preg_matches)</method>
+				<method type="static">packJS($js_content)</method>
+				<method type="static">parserSQL($sql)</method>
+				<method type="static">minifyCSS($css_content, $fileuri = false)</method>
+				<method type="static">replaceByAbsoluteURL($matches)</method>
+				<method type="static">addJS($js_uri)</method>
+				<method type="static">addCSS($css_uri, $css_media_type = 'all')</method>
+				<method type="static">cccCss($css_files)</method>
+				<method type="static">cccJS($js_files)</method>
+				<method type="static">getMediaServer($filename)</method>
+				<method type="static">generateHtaccess($path = null, $rewrite_settings = null, $cache_control = null, $specific = '', $disable_multiviews = null)</method>
+				<method type="static">jsonDecode($json, $assoc = false)</method>
+				<method type="static">jsonEncode($data)</method>
+				<method type="static">displayAsDeprecated($message = null)</method>
+				<method type="static">displayParameterAsDeprecated($parameter)</method>
+				<method type="static">displayFileAsDeprecated()</method>
+				<method type="static">throwDeprecated($error, $message, $class)</method>
+				<method type="static">enableCache($level = 1, Context $context = null)</method>
+				<method type="static">restoreCacheSettings(Context $context = null)</method>
+				<method type="static">isCallable($function)</method>
+				<method type="static">pRegexp($s, $delim)</method>
+				<method type="static">str_replace_once($needle, $replace, $haystack)</method>
+				<method type="static">property_exists($class, $property)</method>
+				<method type="static">checkPhpVersion()</method>
+				<method type="static">ZipTest($from_file)</method>
+				<method type="static">ZipExtract($from_file, $to_dir)</method>
+				<method type="static">getProductsOrder($type, $value = null, $prefix = false)</method>
+				<method type="static">convertBytes($value)</method>
+				<method type="static">display404Error()</method>
+				<method type="static">url($begin, $end)</method>
+				<method type="static">dieOrLog($msg, $die = true)</method>
+				<method type="static">nl2br($str)</method>
+				<method type="static">clearCache($smarty, $tpl = false, $cache_id = null, $compile_id = null)</method>
+				<method type="static">getMemoryLimit()</method>
+				<method type="static">getOctets($option)</method>
+				<method type="static">isX86_64arch()</method>
+				<method type="static">getMaxUploadSize($max_size = 0)</method>
+				<method type="static">apacheModExists($name)</method>
+				<method type="static">scandir($path, $ext = 'php', $dir = '', $recursive = false)</method>
+				<method type="static">version_compare($v1, $v2, $operator = '<')</method>
+				<method type="static">alignVersionNumber($v1, $v2)</method>
+				<method type="static">modRewriteActive()</method>
+				<method type="static">unSerialize($serialized, $object = false)</method>
+				<method type="static">arrayUnique($array)</method>
+				<method type="static">getAdminTranslation($string, $class = 'AdminTab', $addslashes = false, $htmlentities = true, $sprintf = null)</method>
+				<method type="static">getGenericAdminTranslation($string, $key = null, $lang_array)</method>
+				<method type="static">getModuleTranslation($module, $string, $source, $sprintf = null)</method>
+				<method type="static">getPdfTranslation($string)</method>
+				<method type="static">checkAndReplaceArgs($string, $args)</method>
+			</methods>
+		</class>
+		<class name="TranslatedConfiguration">
+			<methods>
+				<method type="public">__construct($id = NULL, $id_lang = NULL)</method>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="public">update($nullValues = false)</method>
+				<method type="public">getWebserviceObjectList($sql_join, $sql_filter, $sql_sort, $sql_limit)</method>
+			</methods>
+		</class>
+		<class name="Upgrader">
+			<methods>
+				<method type="public">__construct($autoload = false)</method>
+				<method type="public">__get($var)</method>
+				<method type="public">downloadLast($dest, $filename = 'prestashop.zip')</method>
+				<method type="public">isLastVersion()</method>
+				<method type="public">checkPSVersion($force = false)</method>
+				<method type="public">loadFromConfig()</method>
+				<method type="public">getChangedFilesList()</method>
+				<method type="public">addChangedFile($path)</method>
+				<method type="public">addMissingFile($path)</method>
+				<method type="public">browseXmlAndCompare($node, $current_path = array</method>
+				<method type="public">compareChecksum($path, $original_sum)</method>
+				<method type="public">isAuthenticPrestashopVersion()</method>
+			</methods>
+		</class>
+		<class name="Validate">
+			<methods>
+				<method type="static">isIp2Long($ip)</method>
+				<method type="static">isAnything()</method>
+				<method type="static">isEmail($email)</method>
+				<method type="static">isModuleUrl($url, $errors)</method>
+				<method type="static">isMd5($md5)</method>
+				<method type="static">isSha1($sha1)</method>
+				<method type="static">isFloat($float)</method>
+				<method type="static">isUnsignedFloat($float)</method>
+				<method type="static">isOptFloat($float)</method>
+				<method type="static">isCarrierName($name)</method>
+				<method type="static">isImageSize($size)</method>
+				<method type="static">isName($name)</method>
+				<method type="static">isHookName($hook)</method>
+				<method type="static">isMailName($mail_name)</method>
+				<method type="static">isMailSubject($mail_subject)</method>
+				<method type="static">isModuleName($module_name)</method>
+				<method type="static">isTplName($tpl_name)</method>
+				<method type="static">isImageTypeName($type)</method>
+				<method type="static">isPrice($price)</method>
+				<method type="static">isNegativePrice($price)</method>
+				<method type="static">isLanguageIsoCode($iso_code)</method>
+				<method type="static">isLanguageCode($s)</method>
+				<method type="static">isStateIsoCode($iso_code)</method>
+				<method type="static">isNumericIsoCode($iso_code)</method>
+				<method type="static">isDiscountName($voucher)</method>
+				<method type="static">isCatalogName($name)</method>
+				<method type="static">isMessage($message)</method>
+				<method type="static">isCountryName($name)</method>
+				<method type="static">isLinkRewrite($link)</method>
+				<method type="static">isAddress($address)</method>
+				<method type="static">isCityName($city)</method>
+				<method type="static">isValidSearch($search)</method>
+				<method type="static">isGenericName($name)</method>
+				<method type="static">isCleanHtml($html)</method>
+				<method type="static">isReference($reference)</method>
+				<method type="static">isPasswd($passwd, $size = 5)</method>
+				<method type="static">isPasswdAdmin($passwd)</method>
+				<method type="static">isConfigName($config_name)</method>
+				<method type="static">isPhpDateFormat($date_format)</method>
+				<method type="static">isDateFormat($date)</method>
+				<method type="static">isDate($date)</method>
+				<method type="static">isBirthDate($date)</method>
+				<method type="static">isBool($bool)</method>
+				<method type="static">isPhoneNumber($number)</method>
+				<method type="static">isEan13($ean13)</method>
+				<method type="static">isUpc($upc)</method>
+				<method type="static">isPostCode($postcode)</method>
+				<method type="static">isZipCodeFormat($zip_code)</method>
+				<method type="static">isOrderWay($way)</method>
+				<method type="static">isOrderBy($order)</method>
+				<method type="static">isTableOrIdentifier($table)</method>
+				<method type="static">isValuesList()</method>
+				<method type="static">isTagsList($list)</method>
+				<method type="static">isProductVisibility($s)</method>
+				<method type="static">isInt($value)</method>
+				<method type="static">isUnsignedInt($value)</method>
+				<method type="static">isPercentage($value)</method>
+				<method type="static">isUnsignedId($id)</method>
+				<method type="static">isNullOrUnsignedId($id)</method>
+				<method type="static">isLoadedObject($object)</method>
+				<method type="static">isColor($color)</method>
+				<method type="static">isUrl($url)</method>
+				<method type="static">isTrackingNumber($tracking_number)</method>
+				<method type="static">isUrlOrEmpty($url)</method>
+				<method type="static">isAbsoluteUrl($url)</method>
+				<method type="static">isMySQLEngine($engine)</method>
+				<method type="static">isUnixName($data)</method>
+				<method type="static">isTablePrefix($data)</method>
+				<method type="static">isFileName($name)</method>
+				<method type="static">isDirName($dir)</method>
+				<method type="static">isTabName($name)</method>
+				<method type="static">isWeightUnit($unit)</method>
+				<method type="static">isDistanceUnit($unit)</method>
+				<method type="static">isSubDomainName($domain)</method>
+				<method type="static">isVoucherDescription($text)</method>
+				<method type="static">isSortDirection($value)</method>
+				<method type="static">isLabel($label)</method>
+				<method type="static">isPriceDisplayMethod($data)</method>
+				<method type="static">isDniLite($dni)</method>
+				<method type="static">isCookie($data)</method>
+				<method type="static">isString($data)</method>
+				<method type="static">isReductionType($data)</method>
+				<method type="static">isBoolId($ids)</method>
+				<method type="static">isBool_Id($ids)</method>
+				<method type="static">isLocalizationPackSelection($data)</method>
+				<method type="static">isSerializedArray($data)</method>
+				<method type="static">isCoordinate($data)</method>
+				<method type="static">isLangIsoCode($iso_code)</method>
+				<method type="static">isLanguageFileName($file_name)</method>
+				<method type="static">isArrayWithIds($ids)</method>
+				<method type="static">isSceneZones($zones)</method>
+				<method type="static">isStockManagement($stock_management)</method>
+				<method type="static">isSiret($siret)</method>
+				<method type="static">isApe($ape)</method>
+				<method type="static">isControllerName($name)</method>
+			</methods>
+		</class>
+		<class name="WebserviceException">
+			<methods>
+				<method type="public">__construct($message, $code)</method>
+				<method type="public">getType()</method>
+				<method type="public">setType($type)</method>
+				<method type="public">setStatus($status)</method>
+				<method type="public">getStatus()</method>
+				<method type="public">getWrongValue()</method>
+				<method type="public">setDidYouMean($wrong_value, $available_values)</method>
+				<method type="public">getAvailableValues()</method>
+			</methods>
+		</class>
+		<class name="WebserviceKey">
+			<methods>
+				<method type="public">add($autodate = true, $nullValues = false)</method>
+				<method type="static">keyExists($key)</method>
+				<method type="public">delete()</method>
+				<method type="public">deleteAssociations()</method>
+				<method type="static">getPermissionForAccount($auth_key)</method>
+				<method type="static">isKeyActive($auth_key)</method>
+				<method type="static">getClassFromKey($auth_key)</method>
+				<method type="static">setPermissionForAccount($id_account, $permissions_to_set)</method>
+				<method type="public">__construct($ws_url)</method>
+				<method type="public">setObjectRender(WebserviceOutputInterface $obj_render)</method>
+				<method type="public">getObjectRender()</method>
+				<method type="public">setWsResources($resources)</method>
+				<method type="public">buildHeader()</method>
+				<method type="public">setHeaderParams($key, $value)</method>
+				<method type="public">getHeaderParams($key = null)</method>
+				<method type="public">resetHeaderParams()</method>
+				<method type="public">getStatus()</method>
+				<method type="public">getStatusInt()</method>
+				<method type="public">setStatus($num)</method>
+				<method type="public">getErrors($errors)</method>
+				<method type="public">getResourcesList($key_permissions)</method>
+				<method type="public">registerOverrideWSParameters($wsrObject, $method)</method>
+				<method type="public">getContent($objects, $schema_to_display = null, $fields_to_display = 'minimum', $depth = 0, $type_of_view = self::VIEW_LIST, $override = true)</method>
+				<method type="public">renderEntityMinimum($object, $depth)</method>
+				<method type="public">renderSchema($object, $ws_params)</method>
+				<method type="public">renderEntity($object, $depth)</method>
+				<method type="public">renderField($object, $ws_params, $field_name, $field, $depth)</method>
+				<method type="public">renderAssociations($object, $depth, $associations, $ws_params)</method>
+				<method type="public">renderFlatAssociation($object, $depth, $assoc_name, $resource_name, $fields_assoc, $object_assoc, $parent_details)</method>
+				<method type="public">setIndent($depth)</method>
+				<method type="public">getSynopsisDetails($field)</method>
+				<method type="public">setSpecificField($object, $method, $field_name, $entity_name)</method>
+				<method type="public">validateObjectAndMethod($object, $method)</method>
+				<method type="public">getSpecificField()</method>
+				<method type="public">overrideSpecificField($entity_name, $field_name, $field, $entity_object, $ws_params)</method>
+				<method type="public">setVirtualField($object, $method, $entity_name, $parameters)</method>
+				<method type="public">getVirtualFields()</method>
+				<method type="public">addVirtualFields($entity_name, $entity_object)</method>
+				<method type="public">setFieldsToDisplay($fields)</method>
+			</methods>
+		</class>
+		<class name="WebserviceOutputInterface">
+			<methods>
+				<method type="public">__construct($languages = array</method>
+				<method type="public">setWsUrl($url)</method>
+				<method type="public">getWsUrl()</method>
+				<method type="public">getContentType()</method>
+				<method type="public">setSchemaToDisplay($schema)</method>
+				<method type="public">getSchemaToDisplay()</method>
+				<method type="public">renderField($field)</method>
+				<method type="public">renderNodeHeader($obj, $params ,$more_attr = null)</method>
+				<method type="public">renderNodeFooter($obj, $params)</method>
+				<method type="public">renderAssociationHeader($obj, $params, $assoc_name)</method>
+				<method type="public">renderAssociationFooter($obj, $params, $assoc_name)</method>
+				<method type="public">overrideContent($content)</method>
+				<method type="public">renderErrorsHeader()</method>
+				<method type="public">renderErrorsFooter()</method>
+				<method type="public">renderErrors($message, $code = null)</method>
+			</methods>
+		</class>
+		<class name="WebserviceOutputInterface">
+			<methods>
+				<method type="public">setSchemaToDisplay($schema)</method>
+				<method type="public">getSchemaToDisplay()</method>
+				<method type="public">setWsUrl($url)</method>
+				<method type="public">getWsUrl()</method>
+				<method type="public">getContentType()</method>
+				<method type="public">__construct($languages = array</method>
+				<method type="public">setLanguages($languages)</method>
+				<method type="public">renderErrorsHeader()</method>
+				<method type="public">renderErrorsFooter()</method>
+				<method type="public">renderErrors($message, $code = null)</method>
+				<method type="public">renderField($field)</method>
+				<method type="public">renderNodeHeader($node_name, $params, $more_attr = null, $has_child = true)</method>
+				<method type="public">getNodeName($params)</method>
+				<method type="public">renderNodeFooter($node_name, $params)</method>
+				<method type="public">overrideContent($content)</method>
+				<method type="public">renderAssociationWrapperHeader()</method>
+				<method type="public">renderAssociationWrapperFooter()</method>
+				<method type="public">renderAssociationHeader($obj, $params, $assoc_name, $closed_tags = false)</method>
+				<method type="public">renderAssociationFooter($obj, $params, $assoc_name)</method>
+			</methods>
+		</class>
+		<class name="WebserviceRequest">
+			<methods>
+				<method type="public">getOutputEnabled()</method>
+				<method type="public">setOutputEnabled($bool)</method>
+				<method type="static">getInstance()</method>
+				<method type="public">getOutputObject($type)</method>
+				<method type="static">getResources()</method>
+				<method type="public">getPriceForProduct($field, $entity_object, $ws_params)</method>
+				<method type="public">specificPriceForProduct($entity_object, $parameters)</method>
+				<method type="public">specificPriceCalculation($parameters)</method>
+				<method type="public">specificPriceForCombination($entity_object, $parameters)</method>
+				<method type="public">fetch($key, $method, $url, $params, $bad_class_name, $inputXml = NULL)</method>
+				<method type="public">webserviceChecks()</method>
+				<method type="public">setError($status, $label, $code)</method>
+				<method type="public">setErrorDidYouMean($num, $label, $value, $available_values, $code)</method>
+				<method type="public">getClosest($input, $words)</method>
+				<method type="public">webserviceErrorHandler($errno, $errstr, $errfile, $errline)</method>
+				<method type="public">hasErrors()</method>
+				<method type="public">authenticate()</method>
+				<method type="public">isActivated()</method>
+				<method type="public">shopHasRight($key)</method>
+				<method type="public">shopExists($params)</method>
+				<method type="public">groupShopExists($params)</method>
+				<method type="public">checkHTTPMethod()</method>
+				<method type="public">checkResource()</method>
+				<method type="public">setObjects()</method>
+				<method type="public">parseDisplayFields($str)</method>
+				<method type="public">setFieldsToDisplay()</method>
+				<method type="public">manageFilters()</method>
+				<method type="public">getFilteredObjectList()</method>
+				<method type="public">getFilteredObjectDetails()</method>
+				<method type="public">executeEntityGetAndHead()</method>
+				<method type="public">executeEntityPost()</method>
+				<method type="public">executeEntityPut()</method>
+				<method type="public">executeEntityDelete()</method>
+				<method type="public">saveEntityFromXml($successReturnCode)</method>
+				<method type="public">getSQLRetrieveFilter($sqlId, $filterValue, $tableAlias = 'main.')</method>
+				<method type="public">filterLanguage()</method>
+				<method type="public">returnOutput()</method>
+			</methods>
+		</class>
+		<class name="WebserviceSpecificManagementInterface">
+			<methods>
+				<method type="public">setObjectOutput(WebserviceOutputBuilder $obj)</method>
+				<method type="public">getObjectOutput()</method>
+				<method type="public">setWsObject(WebserviceRequest $obj)</method>
+				<method type="public">getWsObject()</method>
+				<method type="public">getContent()</method>
+				<method type="public">manage()</method>
+				<method type="public">manageImages()</method>
+				<method type="public">manageGeneralImages()</method>
+				<method type="public">manageDefaultDeclinatedImages($directory, $normal_image_sizes)</method>
+				<method type="public">manageListDeclinatedImages($directory, $normal_image_sizes)</method>
+				<method type="public">manageEntityDeclinatedImages($directory, $normal_image_sizes)</method>
+				<method type="public">manageDeclinatedImages($directory)</method>
+				<method type="public">manageProductImages()</method>
+				<method type="public">manageDeclinatedImagesCRUD($filename_exists, $filename, $imageSizes, $directory)</method>
+				<method type="public">deleteImageOnDisk($filePath, $imageTypes = null, $parentPath = null)</method>
+				<method type="public">writeImageOnDisk($basePath, $newPath, $destWidth = null, $destHeight = null, $imageTypes = null, $parentPath = null)</method>
+				<method type="public">writePostedImageOnDisk($receptionPath, $destWidth = null, $destHeight = null, $imageTypes = null, $parentPath = null)</method>
+			</methods>
+		</class>
+		<class name="WebserviceSpecificManagementInterface">
+			<methods>
+				<method type="public">setObjectOutput(WebserviceOutputBuilder $obj)</method>
+				<method type="public">getObjectOutput()</method>
+				<method type="public">setWsObject(WebserviceRequest $obj)</method>
+				<method type="public">getWsObject()</method>
+				<method type="public">manage()</method>
+				<method type="public">getContent()</method>
+			</methods>
+		</class>
+		<class name="WebserviceSpecificManagementInterface">
+			<methods>
+				<method type="public">setObjectOutput(WebserviceOutputBuilder $obj)</method>
+				<method type="public">setWsObject(WebserviceRequest $obj)</method>
+				<method type="public">getWsObject()</method>
+				<method type="public">getObjectOutput()</method>
+				<method type="public">setUrlSegment($segments)</method>
+				<method type="public">getUrlSegment()</method>
+				<method type="public">manage()</method>
+				<method type="public">getContent()</method>
+			</methods>
+		</class>
+		<class name="Zone">
+			<methods>
+				<method type="static">getZones($active = false)</method>
+				<method type="static">getIdByName($name)</method>
+				<method type="public">delete()</method>
+			</methods>
+		</class>
+	</classes>
+</lib>

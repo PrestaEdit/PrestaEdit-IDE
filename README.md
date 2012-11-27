@@ -1,4 +1,4 @@
-IDE
+PrestaEdit (IDE)
 ===
 
 IDE PrestaEdit pour PrestaShop
